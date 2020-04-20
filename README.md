@@ -1,30 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+# NextJS - Sample integration with Porsche Design System
 
-## Getting Started
+For further documentation regarding designing websites and the correct usage of the components, 
+you can visit our website https://designsystem.porsche.com/.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
+## Get the project up and running
+
+### yarn
+* Install dependencies via `yarn install`
+* Build the application via `yarn build`
+* Run tests via `yarn test`
+* Run the application via `yarn start`
+
+
+### npm
+* Install dependencies via `npm install`
+* Build the application via `npm run build`
+* Run tests via `npm test`
+* Run the application via `npm start`
+
+---
+
+## Test the application
+
+It is yet not possible to render our web components in **jsdom**.
+
+To ensure your tests don't fail, we provide mocks for every Porsche Design System component. 
+They are distributed in the `@porsche-design-system/components-react` npm package.
+
+We consume the Mocks in the **setupTest.js** file in the root folder.
+
 ```
+// setupTest.js
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+jest.mock('@porsche-design-system/components-react', () => {
+    return require('@porsche-design-system/components-react/mocks');
+});
+```
+You have to access the mocks in the Mock-Factory of the `jest.mock()` function. We have to use `require` because the mock factory doesn't allow otherwise. 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on ZEIT Now
-
-The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Use this solution until there is an upgrades to a newer **jsdom** version which provides support for **Web Components**.
+In the meantime we keep providing mocks.
+ 
+You find detailed information on how to use mock functions in **Jest** [here](https://jestjs.io/docs/en/mock-functions.html).
