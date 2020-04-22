@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 import { PLinkPure } from '@porsche-design-system/components-react';
 
