@@ -9,7 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@porsche-design-system/components-react": "^1.4.0-rc.0",
+    "@porsche-design-system/components-react": "^1.4.0",
     "@zeit/next-css": "^1.0.1",
     "next": "9.3.5",
     "react": "16.13.1",
