@@ -1,5 +1,4 @@
 import React, { ChangeEvent, FormEvent, useState } from "react"
-import '../styles.css'
 import {
     PCheckboxWrapper,
     PDivider,

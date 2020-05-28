@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import React from 'react';
-import '../styles.css'
 import { PGrid, PHeadline, PGridItem, PDivider, PText } from '@porsche-design-system/components-react';
 import RouterComponent from '../components/router';
 
