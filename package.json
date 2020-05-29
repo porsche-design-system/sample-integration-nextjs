@@ -7,7 +7,7 @@
     "build": "next build && next export",
     "start": "next start",
     "test": "jest",
-    "prettier": "prettier --write **/*.{ts,tsx}"
+    "prettier": "prettier --write '**/*.{ts,tsx}'"
   },
   "dependencies": {
     "@porsche-design-system/components-react": "^1.4.0",
