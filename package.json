@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && touch out/.nojekyl",
+    "build": "next build && next export && touch out/.nojekyll",
     "start": "next start",
     "test": "jest",
     "prettier": "prettier --write '**/*.{ts,tsx}'"
