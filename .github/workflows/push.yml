@@ -35,7 +35,7 @@ jobs:
     name: 'Deployment'
     needs: [build]
     runs-on: ubuntu-latest
-    # if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/master'
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v2
