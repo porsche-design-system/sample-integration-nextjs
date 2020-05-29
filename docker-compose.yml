@@ -1,0 +1,27 @@
+version: "3.5"
+
+services:
+  sample-integration:
+    build: ./docker/node
+    working_dir: /opt/sample-integration-app
+    user: "${RUN_UID}:${RUN_GID}"
+    ports:
+      - "61423:61423"
+    environment:
+      - HOME=/home/sample-integration
+    env_file:
+    - .env
+    volumes:
+      - ./:/opt/sample-integration-app:cached
+      - home:/home/sample-integration
+      - node-modules:/opt/sample-integration-app/node_modules
+  change-volume-owner:
+    image: node:10.15.3-alpine@sha256:b85a3b0ef76f5543b3f467e8a25694e72594d2c2bfcf140fa584d4f40ace4130
+    volumes:
+      - home:/opt/sample-integration-volumes/home
+      - node-modules:/opt/sample-integration-volumes/node_modules
+    command: |
+      sh -c "chown ${RUN_UID}:${RUN_GID} /opt/sample-integration-volumes/*"
+volumes:
+  home:
+  node-modules:
