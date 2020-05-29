@@ -23,7 +23,7 @@ if [[ -z "${GITHUB_SHA}" ]]; then
   exit 1
 fi
 
-if [[ -z "$(ls -A ./build)" ]]; then
+if [[ -z "$(ls -A ./.next/serverless/pages)" ]]; then
   echo "Please provide the build artifact."
   exit 1
 fi
@@ -49,7 +49,7 @@ prepare_deployment() {
 copy_sample() {
   echo "task: [$(date)] \"copy_sample\" (${1})"
   mkdir -p "/opt/sample-integration-gh-pages/${1}"
-  cp -r "./build/." "/opt/sample-integration-gh-pages/${1}"
+  cp -r "./.next/serverless/pages/." "/opt/sample-integration-gh-pages/${1}"
 }
 
 add_deployment_version() {
@@ -73,8 +73,7 @@ verify_deployment() {
   local max=20
   local delay=60
   local http_response=""
-  while true
-  do
+  while true; do
     http_response="$(curl -s -H "Cache-Control: no-cache" "https://porscheui.github.io/"${GITHUB_REPOSITORY/porscheui\//}"/${1}/version.md")"
     echo "Check deployment status (${1}). Attempt ${n}/${max} (${http_response}). [$(date)]"
     if [[ "${http_response}" == "${GITHUB_SHA}" ]]; then
@@ -105,8 +104,8 @@ source "${SCRIPT_DIR}/../shared/ensure-github-credentials.sh"
 if isCurrentBranchMasterBranch; then
   setup
   checkout_gh_pages
-  prepare_deployment # no folder is specified to host app in root
-  copy_sample # no folder is specified to host app in root
+  prepare_deployment     # no folder is specified to host app in root
+  copy_sample            # no folder is specified to host app in root
   add_deployment_version # no folder is specified to host app in root
   deploy_to_gh_pages
   verify_deployment # no folder is specified to host app in root

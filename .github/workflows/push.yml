@@ -4,47 +4,47 @@ on:
       - master
       - feature/*
       - housekeeping/*
-name: "Sample Integration NextJS"
+name: 'Sample Integration NextJS'
 jobs:
   build:
-    name: "Build"
+    name: 'Build'
     runs-on: ubuntu-latest
     steps:
-      - name: "Checkout"
+      - name: 'Checkout'
         uses: actions/checkout@v2
-      - name: "Install"
+      - name: 'Install'
         uses: ./docker/node/
         env:
           PORSCHE_NPM_REGISTRY_TOKEN: ${{ secrets.PORSCHE_NPM_REGISTRY_TOKEN }}
         with:
           entrypoint: run-install
-      - name: "Unit Test"
+      - name: 'Unit Test'
         uses: ./docker/node/
         with:
           entrypoint: run-test
-      - name: "Build"
+      - name: 'Build'
         uses: ./docker/node/
         with:
           entrypoint: run-build
-      - name: "Store build artifact"
+      - name: 'Store build artifact'
         uses: actions/upload-artifact@v1
         with:
           name: sample-build
-          path: ./build
+          path: ./.next/serverless/pages
   deployment:
-    name: "Deployment"
+    name: 'Deployment'
     needs: [build]
     runs-on: ubuntu-latest
     # if: github.ref == 'refs/heads/master'
     steps:
-      - name: "Checkout"
+      - name: 'Checkout'
         uses: actions/checkout@v2
-      - name: "Restore build artifact"
+      - name: 'Restore build artifact'
         uses: actions/download-artifact@v1
         with:
           name: sample-build
-          path: ./build
-      - name: "Deploy"
+          path: ./.next/serverless/pages
+      - name: 'Deploy'
         uses: ./docker/node/
         env:
           GIT_DEPLOY_KEY: ${{ secrets.GIT_DEPLOY_KEY }}
