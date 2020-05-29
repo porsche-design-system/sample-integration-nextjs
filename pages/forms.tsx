@@ -10,10 +10,9 @@ import {
     PTextareaWrapper,
     PTextFieldWrapper
 } from "@porsche-design-system/components-react"
-import RouterComponent from '../components/router';
+import Header from '../components/header';
 
-
-const Forms: React.FC = () => {
+const FormsPage = (): JSX.Element => {
     const [select, setSelect] = useState("Change this Headline by selecting");
     const [checkBox, setCheckBox] = useState(false);
     const [radioButton, setRadioButton] = useState(false);
@@ -40,85 +39,75 @@ const Forms: React.FC = () => {
     };
 
     return (
-        <div className={'pageLayout'}>
-            <PFlex direction={"column"}>
+        <div className="pageLayout">
+            <Header />
+            <PFlex direction="column">
                 <PFlexItem>
-                    <PHeadline align={'center'}>
-                        Example usage of the Porsche Design System in NextJS
-                    </PHeadline>
-                </PFlexItem>
-                <PFlexItem className={'contentWrapperBig'}>
-                    <RouterComponent/>
+                    <PHeadline variant="headline-3">Form examples</PHeadline>
                 </PFlexItem>
                 <PFlexItem>
-                    <PDivider className={'divider'}/>
-                </PFlexItem>
-                <PFlexItem>
-                    <PHeadline variant={"headline-3"}>Form examples</PHeadline>
-                </PFlexItem>
-                <PFlexItem>
-                    <PDivider className={"divider"}/>
+                    <PDivider className="divider" />
                 </PFlexItem>
                 <PFlexItem>
                     {/*To illustrate the mock procedure during the tests the selected value is displayed in the headline */}
-                    <PHeadline variant={"headline-4"}>{select}</PHeadline>
+                    <PHeadline variant="headline-4">{select}</PHeadline>
                     <form>
                         <PSelectWrapper>
                             <select data-testid="select" value={select}
                                     onChange={e => handleSelect(e)}>
-                                <option value={"Headline A"}>A</option>
-                                <option value={"Headline B"}>B</option>
-                                <option value={"Headline C"}>C</option>
+                                <option value="Headline A">A</option>
+                                <option value="Headline B">B</option>
+                                <option value="Headline C">C</option>
                             </select>
                         </PSelectWrapper>
                     </form>
                 </PFlexItem>
                 <PFlexItem>
-                    <PDivider className={"divider"}/>
+                    <PDivider className="divider" />
                 </PFlexItem>
                 <PFlexItem>
                     {/*Checking the Checkbox makes the headline appear*/}
-                    {checkBox ? <PHeadline variant={"headline-4"}>Checkbox Works</PHeadline> : ""}
-                    <PCheckboxWrapper label={"Some label"} hideLabel={false}>
-                        <input data-testid="checkbox" type={"checkbox"} name={"TestBox"}
+                    {checkBox ? <PHeadline variant="headline-4">Checkbox Works</PHeadline> : ""}
+                    <PCheckboxWrapper label="Some label" hideLabel={false}>
+                        <input data-testid="checkbox" type="checkbox" name="TestBox"
                                onInput={e => handleCheckBox(e)}/>
                     </PCheckboxWrapper>
                 </PFlexItem>
-                <PFlexItem className={"contentWrapperSmall"}>
+                <PFlexItem className="contentWrapperSmall">
                     {/* Clicking the Radiobutton makes the headline appear*/}
-                    {radioButton ? <PHeadline variant={"headline-4"}>Radio Works</PHeadline> : ""}
-                    <PRadioButtonWrapper label={"Some label"} hideLabel={false}>
-                        <input data-testid="radiobutton" type={"radio"} name={"RadioButton"}
+                    {radioButton ? <PHeadline variant="headline-4">Radio Works</PHeadline> : ""}
+                    <PRadioButtonWrapper label="Some label" hideLabel={false}>
+                        <input data-testid="radiobutton" type="radio" name="RadioButton"
                                onInput={e => handleRadioButton(e)}/>
                     </PRadioButtonWrapper>
                 </PFlexItem>
                 <PFlexItem>
-                    <PDivider className={"divider"}/>
+                    <PDivider className="divider" />
                 </PFlexItem>
                 <PFlexItem>
                     <form>
-                        <PTextareaWrapper label={"Test TextArea"} hideLabel={false}>
-                            <textarea name={"Testarea"}></textarea>
+                        <PTextareaWrapper label="Test TextArea" hideLabel={false}>
+                            <textarea name="Testarea"></textarea>
                         </PTextareaWrapper>
                     </form>
                 </PFlexItem>
-                <PFlexItem className={"contentWrapperSmall"}>
+                <PFlexItem className="contentWrapperSmall">
                     {/*The headline changes according to the text field input*/}
-                    <PHeadline variant={"headline-4"}>{textField}</PHeadline>
-                    <PTextFieldWrapper label={"Test TextField"} hideLabel={false}>
-                        <input data-testid="input" type={"text"} name={"Textfield"}
+                    <PHeadline variant="headline-4">{textField}</PHeadline>
+                    <PTextFieldWrapper label="Test TextField" hideLabel={false}>
+                        <input data-testid="input" type="text" name="Textfield"
                                onChange={e => handleTextField(e)}/>
                     </PTextFieldWrapper>
                 </PFlexItem>
-                <PFlexItem className={"contentWrapperSmall"}>
+                <PFlexItem className="contentWrapperSmall">
                     <form>
                         <PFlexItem>
                             <PTextFieldWrapper>
                                 {/*Example of slotted links*/}
-                                <span slot={"label"}>Some label with a <a data-testid="slottedHref"
-                                                                          href={"https://designsystem.porsche.com"}>Slotted Link</a>.</span>
-                                <input data-testid="slottedInput" type={"text"} aria-invalid={true}
-                                       name={"some-name"} onChange={e => handleTextField(e)}/>
+                                <span slot="label">Some label with a <a data-testid="slottedHref"
+                                                                        href={"https://designsystem.porsche.com"}>Slotted Link</a>.</span>
+                                <input data-testid="slottedInput" type="text" aria-invalid={true}
+                                       name="some-name" onChange={e => handleTextField(e)}/>
                             </PTextFieldWrapper>
                         </PFlexItem>
                     </form>
@@ -128,4 +117,4 @@ const Forms: React.FC = () => {
     )
 };
 
-export default Forms
+export default FormsPage;

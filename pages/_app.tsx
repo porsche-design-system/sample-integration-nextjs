@@ -17,7 +17,7 @@ export default class StyledApp extends App {
             content="width=device-width, initial-scale=1, viewport-fit=cover"
             key="viewport"
           />
-          <title>PDS in Next.js</title>
+          <title>Sample Integration NextJ</title>
 
           {/** This breaks fonts, icons in IE11. */}
           {/* <link rel="icon" href="/favicon.ico" key="favicon" /> */}
