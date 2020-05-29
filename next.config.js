@@ -1,6 +1,7 @@
 // Add next-with-images and next-transpile-modules to the webpack config
 module.exports = {
   target: "serverless",
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/sample-integration-nextjs' : '',
   webpack: (config) => {
     const result = {
       ...config,
