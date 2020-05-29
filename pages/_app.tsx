@@ -1,8 +1,8 @@
-import React from "react";
-import App from "next/app";
-import Head from "next/head";
+import React from 'react';
+import App from 'next/app';
+import Head from 'next/head';
 
-import "../styles.css";
+import '../styles.css';
 
 export default class StyledApp extends App {
   render() {
@@ -12,11 +12,7 @@ export default class StyledApp extends App {
         {/* Add site-wide head tags here, but put page specific tags in the individual pages instead. */}
         <Head>
           {/** This doesn't break fonts or icons. */}
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, viewport-fit=cover"
-            key="viewport"
-          />
+          <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" key="viewport" />
           <title>Sample Integration NextJ</title>
 
           {/** This breaks fonts, icons in IE11. */}
