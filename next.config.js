@@ -1,9 +1,12 @@
-const isProd = process.env.NODE_ENV === 'production';
+const BASE_PATH = process.env.NODE_ENV === 'production' ? '/sample-integration-nextjs' : '';
 
 // Add next-with-images and next-transpile-modules to the webpack config
 module.exports = {
   target: 'serverless',
-  assetPrefix: isProd ? '/sample-integration-nextjs' : '',
+  assetPrefix: BASE_PATH,
+  env: {
+    BASE_PATH,
+  },
   webpack: (config) => {
     const result = {
       ...config,
