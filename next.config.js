@@ -1,7 +1,9 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 // Add next-with-images and next-transpile-modules to the webpack config
 module.exports = {
-  target: "serverless",
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/sample-integration-nextjs' : '',
+  target: 'serverless',
+  assetPrefix: isProd ? '/sample-integration-nextjs' : '',
   webpack: (config) => {
     const result = {
       ...config,
@@ -12,11 +14,8 @@ module.exports = {
     result.entry = async () => {
       const entries = await originalEntry();
 
-      if (
-        entries["main.js"] &&
-        !entries["main.js"].includes("./polyfills.js")
-      ) {
-        entries["main.js"].unshift("./polyfills.js");
+      if (entries['main.js'] && !entries['main.js'].includes('./polyfills.js')) {
+        entries['main.js'].unshift('./polyfills.js');
       }
 
       return entries;

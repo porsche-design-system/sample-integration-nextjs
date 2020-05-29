@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { PLinkPure, PGrid, PGridItem, PHeadline, PDivider } from '@porsche-design-system/components-react';
+import PrefixedLink from './prefixedLink';
 
 const Header = (): JSX.Element => (
   <PGrid>
@@ -13,15 +14,15 @@ const Header = (): JSX.Element => (
       <PDivider className="divider" />
     </PGridItem>
     <PGridItem size={12}>
-      <Link href="/collection">
+      <PrefixedLink href="/collection">
         <PLinkPure>Components Collection</PLinkPure>
-      </Link>
-      <Link href="/forms">
+      </PrefixedLink>
+      <PrefixedLink href="/forms">
         <PLinkPure>Forms</PLinkPure>
-      </Link>
-      <Link href="/phn-header">
+      </PrefixedLink>
+      <PrefixedLink href="/phn-header">
         <PLinkPure>Phn Header</PLinkPure>
-      </Link>
+      </PrefixedLink>
     </PGridItem>
     <PGridItem size={12}>
       <PDivider className="divider" />
