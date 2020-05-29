@@ -23,7 +23,7 @@ if [[ -z "${GITHUB_SHA}" ]]; then
   exit 1
 fi
 
-if [[ -z "$(ls -A ./.next/serverless/pages)" ]]; then
+if [[ -z "$(ls -A ./out)" ]]; then
   echo "Please provide the build artifact."
   exit 1
 fi
@@ -49,7 +49,7 @@ prepare_deployment() {
 copy_sample() {
   echo "task: [$(date)] \"copy_sample\" (${1})"
   mkdir -p "/opt/sample-integration-gh-pages/${1}"
-  cp -r "./.next/serverless/pages/." "/opt/sample-integration-gh-pages/${1}"
+  cp -r "./out/." "/opt/sample-integration-gh-pages/${1}"
 }
 
 add_deployment_version() {

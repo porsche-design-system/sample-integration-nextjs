@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: sample-build
-          path: ./.next/serverless/pages
+          path: ./out
   deployment:
     name: 'Deployment'
     needs: [build]
@@ -43,7 +43,7 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: sample-build
-          path: ./.next/serverless/pages
+          path: ./out
       - name: 'Deploy'
         uses: ./docker/node/
         env:
