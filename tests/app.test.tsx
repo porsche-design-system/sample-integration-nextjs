@@ -1,10 +1,10 @@
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
-import ComponentsCollection from '../pages/componentsCollection';
+import Collection from '../pages/collection';
 import Forms from '../pages/forms';
 
 test('renders a headline from Porsche Design System', async () => {
-  const { getByText } = render(<ComponentsCollection />);
+  const { getByText } = render(<Collection />);
   const submitButtonElement = getByText('Submit');
   fireEvent.click(submitButtonElement);
   const headLineElement = getByText(/Hello/i);
@@ -12,7 +12,7 @@ test('renders a headline from Porsche Design System', async () => {
 });
 
 test('dismisses the headline from Porsche Design System', async () => {
-  const { getByText } = render(<ComponentsCollection />);
+  const { getByText } = render(<Collection />);
   const submitButtonElement = getByText('Submit');
   fireEvent.click(submitButtonElement);
   const headLineElement = getByText('Hello');
@@ -68,21 +68,21 @@ test('slotted Link should navigate to PDS while mocked', async () => {
 });
 
 test('a wrapped Link should navigate to #hashTest', async () => {
-  const { getByText } = render(<ComponentsCollection />);
+  const { getByText } = render(<Collection />);
   const link = getByText(/Test PLinkPure/i);
 
   expect(link.closest('a')).toHaveAttribute('href', '#hashTest');
 });
 
 test('a wrapped Link should navigate to #hashTest', async () => {
-  const { getByText } = render(<ComponentsCollection />);
+  const { getByText } = render(<Collection />);
   const link = getByText(/Test propHash/i);
 
   expect(link.closest('a')).toHaveAttribute('href', '#propHashTest');
 });
 
 test('pagination should return page 2', async () => {
-  const { container, getByText } = render(<ComponentsCollection />);
+  const { container, getByText } = render(<Collection />);
 
   if (!container.querySelector('li[value=NEXT_PAGE_LINK]')) {
     return;
