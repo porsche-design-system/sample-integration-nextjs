@@ -23,7 +23,7 @@ you can visit our website https://designsystem.porsche.com/.
 * [Docker](https://www.docker.com) ([see below](#docker-installation-steps))
 
 ### Getting started
-1. Clone [`sample-integration-react` repository](https://github.com/porscheui/porsche-sample-integration-react)
+1. Clone [`sample-integration-nextjs` repository](https://github.com/porscheui/sample-integration-nextjs)
 1. Switch to __project root directory__
 1. Execute command `npm login --registry=https://porscheui.jfrog.io/porscheui/api/npm/npm/`
 1. Enter username, password (Artifactory API Key, __not__ Artifactory password!) and e-mail address when asked in terminal
@@ -42,15 +42,15 @@ you can visit our website https://designsystem.porsche.com/.
 
 ### Start
 1. Switch to __project root directory__
-1. Run `./docker.sh run-start` (starts test server for sample-integration-react itself)
+1. Run `./docker.sh run-start` (starts test server for sample-integration-nextjs itself)
 
 ### Build
 1. Switch to __project root directory__
-1. Run `./docker.sh run-build` (builds releasable sample-integration-react npm package)
+1. Run `./docker.sh run-build` (builds releasable sample-integration-nextjs npm package)
 
 ### Test
 1. Switch to __project root directory__
-1. Run `./docker.sh run-test` (executes test for sample-integration-react)
+1. Run `./docker.sh run-test` (executes test for sample-integration-nextjs)
 
 ## Test the application
 
