@@ -1,5 +1,10 @@
 # NextJS - Sample integration with Porsche Design System
 
+## Introduction
+
+This is project shows the example usage of the Porsche Design System Components in NextJS.
+See also the [project documentation](https://designsystem.porsche.com/v1/#/start-coding/nextjs) and the [deployed project](https://porscheui.github.io/sample-integration-nextjs).
+
 For further documentation regarding designing websites and the correct usage of the components, 
 you can visit our website https://designsystem.porsche.com/.
 
