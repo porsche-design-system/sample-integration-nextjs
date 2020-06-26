@@ -1,7 +1,7 @@
-import React from 'react';
 import { PButton, PIcon, PLinkPure } from '@porsche-design-system/components-react';
-import Header from '../components/header';
 import { applyPolyfills, defineCustomElements as definePorscheNavigation } from '@porschehn/navigation/loader';
+import React from 'react';
+import Header from '../components/header';
 
 applyPolyfills().then(() => {
   definePorscheNavigation(window);
