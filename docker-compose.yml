@@ -1,16 +1,16 @@
-version: "3.5"
+version: '3.5'
 
 services:
   sample-integration:
     build: ./docker/node
     working_dir: /opt/sample-integration-app
-    user: "${RUN_UID}:${RUN_GID}"
+    user: '${RUN_UID}:${RUN_GID}'
     ports:
-      - "61423:61423"
+      - '3000:3000'
     environment:
       - HOME=/home/sample-integration
     env_file:
-    - .env
+      - .env
     volumes:
       - ./:/opt/sample-integration-app:cached
       - home:/home/sample-integration

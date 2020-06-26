@@ -1,4 +1,4 @@
-const BASE_PATH = process.env.NODE_ENV === 'production' ? '/sample-integration-nextjs' : '';
+const BASE_PATH = process.env.CI ? '/sample-integration-nextjs' : '';
 
 // Add next-with-images and next-transpile-modules to the webpack config
 module.exports = {
