@@ -15,8 +15,14 @@ export default class StyledApp extends App {
           <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" key="viewport" />
           <title>Sample Integration NextJ</title>
 
-          {/** This breaks fonts, icons in IE11. */}
-          {/* <link rel="icon" href="/favicon.ico" key="favicon" /> */}
+          {/**
+           This breaks fonts, icons in IE11.
+           There is a general issue with duplicated <head> contents like <meta charset> and <meta name=viewport> in all Browsers.
+           Fix this issue first an recheck the IE11 issue.
+           This seems to be related to this issue: https://github.com/vercel/next.js/issues/9794
+           And will maybe fixed with: https://github.com/vercel/next.js/pull/13005 in the next release
+           */}
+           <link rel="icon" href="/favicon.ico" key="favicon" />
 
           {/** This breaks fonts, icons in IE11. */}
           {/* <link
