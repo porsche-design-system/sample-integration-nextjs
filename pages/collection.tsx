@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import {
   PButton,
   PButtonPure,
@@ -12,6 +11,7 @@ import {
   PPagination,
   PSpinner,
 } from '@porsche-design-system/components-react';
+import React, { useState } from 'react';
 import Header from '../components/header';
 
 const CollectionPage = (): JSX.Element => {
