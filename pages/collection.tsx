@@ -13,6 +13,7 @@ import {
 } from '@porsche-design-system/components-react';
 import React, { useState } from 'react';
 import Header from '../components/header';
+import Head from "next/head";
 
 const CollectionPage = (): JSX.Element => {
   const [submit, setSubmit] = useState(false);
@@ -34,6 +35,9 @@ const CollectionPage = (): JSX.Element => {
 
   return (
     <div className="pageLayout">
+      <Head>
+        <title>NextJS sample project - Collection</title>
+      </Head>
       <Header />
       <PGrid>
         <PGridItem size="12">
