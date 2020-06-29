@@ -2,6 +2,7 @@ import { PButton, PIcon, PLinkPure } from '@porsche-design-system/components-rea
 import { applyPolyfills, defineCustomElements as definePorscheNavigation } from '@porschehn/navigation/loader';
 import React from 'react';
 import Header from '../components/header';
+import Head from "next/head";
 
 applyPolyfills().then(() => {
   definePorscheNavigation(window);
@@ -9,10 +10,12 @@ applyPolyfills().then(() => {
 
 const PhnHeaderPage = (): JSX.Element => (
   <div className="pageLayout">
-    <Header />
+    <Head>
+      <title>NextJS sample project - Collection</title>
+    </Head>
     <phn-header env="preview" style={{ position: 'absolute', left: 0, right: 0 }} />
-
-    <div style={{ paddingTop: 150 }}>
+    <div style={{ paddingTop: 180 }}>
+      <Header />
       <div>
         <PButton>Some PButton</PButton>
       </div>

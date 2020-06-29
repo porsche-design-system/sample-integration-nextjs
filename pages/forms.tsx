@@ -11,6 +11,7 @@ import {
 } from '@porsche-design-system/components-react';
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import Header from '../components/header';
+import Head from "next/head";
 
 const FormsPage = (): JSX.Element => {
   const [select, setSelect] = useState('Change this Headline by selecting');
@@ -40,6 +41,9 @@ const FormsPage = (): JSX.Element => {
 
   return (
     <div className="pageLayout">
+      <Head>
+        <title>NextJS sample project - Forms</title>
+      </Head>
       <Header />
       <PFlex direction="column">
         <PFlexItem>
