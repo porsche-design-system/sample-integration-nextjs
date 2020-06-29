@@ -11,7 +11,7 @@ applyPolyfills().then(() => {
 const PhnHeaderPage = (): JSX.Element => (
   <div className="pageLayout">
     <Head>
-      <title>NextJS sample project - Collection</title>
+      <title>NextJS sample project - PHN Header</title>
     </Head>
     <phn-header env="preview" style={{ position: 'absolute', left: 0, right: 0 }} />
     <div style={{ paddingTop: 180 }}>
