@@ -10,7 +10,7 @@
     "prettier": "prettier --write '**/*.{ts,tsx}'"
   },
   "dependencies": {
-    "@porsche-design-system/components-react": "^1.5.0-rc.0",
+    "@porsche-design-system/components-react": "^1.5.2",
     "@porschehn/navigation": "^1.2.1",
     "next": "9.3.5",
     "react": "16.13.1",
