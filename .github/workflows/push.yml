@@ -4,6 +4,8 @@ on:
       - master
       - feature/*
       - housekeeping/*
+      - issue/*
+      - dependabot/**
 name: 'Sample Integration NextJS'
 jobs:
   build:
