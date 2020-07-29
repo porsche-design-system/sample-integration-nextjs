@@ -14,16 +14,16 @@ const Header = (): JSX.Element => (
     </PGridItem>
     <PGridItem size={12}>
       <PrefixedLink href="/collection">
-        <a>Components Collection</a>
+        Components Collection
       </PrefixedLink>
       <PrefixedLink href="/forms">
-        <a>Forms</a>
+        Forms
       </PrefixedLink>
       <PrefixedLink href="/utilities">
-        <a>Utilities</a>
+        Utilities
       </PrefixedLink>
       <PrefixedLink href="/phn-header">
-        <a>Phn Header</a>
+        Phn Header
       </PrefixedLink>
     </PGridItem>
     <PGridItem size={12}>
