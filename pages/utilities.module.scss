@@ -1,0 +1,9 @@
+@import '~@porsche-design-system/utilities/scss';
+
+.backgroundColorPds {
+  background: $p-color-brand;
+}
+
+.textSizeMedium {
+  @include p-text-medium;
+}
