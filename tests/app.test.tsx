@@ -3,6 +3,8 @@ import { fireEvent, render } from '@testing-library/react';
 import Collection from '../pages/collection';
 import Forms from '../pages/forms';
 
+jest.mock('next/link', () => 'a'); // Next JS Bug -> https://github.com/vercel/next.js/issues/15543
+
 test('renders a headline from Porsche Design System', async () => {
   const { getByText } = render(<Collection />);
   const submitButtonElement = getByText('Submit');
