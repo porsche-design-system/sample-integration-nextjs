@@ -11,6 +11,7 @@
     "clean": "rm -rf ./node_modules && rm -rf ./yarn-error.log && rm -rf ./out && rm -rf ./.next"
   },
   "dependencies": {
+    "@porsche-design-system/browser-notification-banner": "^1.0.0-alpha.7",
     "@porsche-design-system/components-react": "^1.5.2",
     "@porsche-design-system/utilities": "1.0.6",
     "@porschehn/navigation": "^1.4.2",
