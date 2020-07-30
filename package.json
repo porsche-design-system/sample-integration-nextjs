@@ -7,7 +7,8 @@
     "build": "next build && next export && touch out/.nojekyll",
     "start": "next start",
     "test": "jest",
-    "prettier": "prettier --write '**/*.{ts,tsx}'"
+    "prettier": "prettier --write '**/*.{ts,tsx}'",
+    "clean": "rm -rf ./node_modules && rm -rf ./yarn-error.log && rm -rf ./out && rm -rf ./.next"
   },
   "dependencies": {
     "@porsche-design-system/components-react": "^1.5.2",
