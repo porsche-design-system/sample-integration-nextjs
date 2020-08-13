@@ -10,8 +10,9 @@
     "prettier": "prettier --write '**/*.{ts,tsx}'"
   },
   "dependencies": {
-    "@porsche-design-system/components-react": "^1.5.2",
-    "@porsche-design-system/utilities": "1.0.6",
+    "@porsche-design-system/components-react": "1.5.3",
+    "@porsche-design-system/partials": "1.1.0",
+    "@porsche-design-system/utilities": "1.1.0",
     "@porschehn/navigation": "^1.4.2",
     "@zeit/next-sass": "^1.0.1",
     "next": "9.5.0",
