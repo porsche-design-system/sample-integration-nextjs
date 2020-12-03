@@ -13,18 +13,10 @@ const Header = (): JSX.Element => (
       <PDivider className="divider" />
     </PGridItem>
     <PGridItem size={12}>
-      <PrefixedLink href="/collection">
-        Components Collection
-      </PrefixedLink>
-      <PrefixedLink href="/forms">
-        Forms
-      </PrefixedLink>
-      <PrefixedLink href="/utilities">
-        Utilities
-      </PrefixedLink>
-      <PrefixedLink href="/phn-header">
-        Phn Header
-      </PrefixedLink>
+      <PrefixedLink href="/collection">Components Collection</PrefixedLink>
+      <PrefixedLink href="/forms">Forms</PrefixedLink>
+      <PrefixedLink href="/utilities">Utilities</PrefixedLink>
+      <PrefixedLink href="/phn-header">Phn Header</PrefixedLink>
     </PGridItem>
     <PGridItem size={12}>
       <PDivider className="divider" />

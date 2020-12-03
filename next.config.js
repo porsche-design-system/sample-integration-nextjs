@@ -1,4 +1,4 @@
-const withSass = require('@zeit/next-sass')
+const withSass = require('@zeit/next-sass');
 const BASE_PATH = process.env.CI ? '/sample-integration-nextjs' : '';
 
 // Add next-with-images and next-transpile-modules to the webpack config
