@@ -13,7 +13,7 @@ import {
 } from '@porsche-design-system/components-react';
 import React, { useState } from 'react';
 import Header from '../components/header';
-import Head from "next/head";
+import Head from 'next/head';
 
 const CollectionPage = (): JSX.Element => {
   const [submit, setSubmit] = useState(false);

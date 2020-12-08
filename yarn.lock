@@ -1540,22 +1540,27 @@
   resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-1.3.0.tgz#8c3e55412878ec59015e1ee0c05d0dcb3032987b"
   integrity sha1-jD5VQSh47FkBXh7gwF0NyzAymHs=
 
-"@porsche-design-system/components-js@1.5.6":
-  version "1.5.6"
-  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-1.5.6.tgz#43c2c8f49b99cc2c90654917692f38c414ab77e3"
-  integrity sha1-Q8LI9JuZzCyQZUkXaS84xBSrd+M=
+"@porsche-design-system/components-js@1.5.7":
+  version "1.5.7"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-1.5.7.tgz#d65adf5156788d41587d97a9fa291fc0072a8b68"
+  integrity sha1-1lrfUVZ4jUFYfZep+ikfwAcqi2g=
 
-"@porsche-design-system/components-react@1.5.6":
-  version "1.5.6"
-  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-react/-/@porsche-design-system/components-react-1.5.6.tgz#7cb3e0bc6018c5efd8d34194c8666f38e621a09c"
-  integrity sha1-fLPgvGAYxe/Y00GUyGZvOOYhoJw=
+"@porsche-design-system/components-react@1.5.7":
+  version "1.5.7"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-react/-/@porsche-design-system/components-react-1.5.7.tgz#60ac35fa43b6cc573fe0cc9ee3dc78ed7d3a905b"
+  integrity sha1-YKw1+kO2zFc/4Mye49x47X06kFs=
   dependencies:
-    "@porsche-design-system/components-js" "1.5.6"
+    "@porsche-design-system/components-js" "1.5.7"
 
 "@porsche-design-system/partials@2.0.0":
   version "2.0.0"
   resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/partials/-/@porsche-design-system/partials-2.0.0.tgz#70b100e7853aa9df7d8737f17944d6274f4c0602"
   integrity sha1-cLEA54U6qd99hzfxeUTWJ09MBgI=
+
+"@porsche-design-system/prettier-config@^1.0.0":
+  version "1.0.0"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/prettier-config/-/@porsche-design-system/prettier-config-1.0.0.tgz#3ab128c42d98cb049ffc0b141362f6963e0a93d7"
+  integrity sha1-OrEoxC2YywSf/AsUE2L2lj4Kk9c=
 
 "@porsche-design-system/scss-utils@^1.0.0":
   version "1.0.1"
@@ -6753,6 +6758,11 @@ prettier@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.0.5.tgz#d6d56282455243f2f92cc1716692c08aa31522d4"
   integrity sha512-7PtVymN48hGcO4fGjybyBSIWDsLU4H4XlvOHfq91pz9kkGlonzwTfYkaIEwiRg/dAJF9YlbsduBAgtYLi+8cFg==
+
+prettier@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
+  integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
 
 pretty-format@^25.2.1, pretty-format@^25.5.0:
   version "25.5.0"

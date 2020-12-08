@@ -11,7 +11,7 @@ import {
 } from '@porsche-design-system/components-react';
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import Header from '../components/header';
-import Head from "next/head";
+import Head from 'next/head';
 
 const FormsPage = (): JSX.Element => {
   const [select, setSelect] = useState('Change this Headline by selecting');

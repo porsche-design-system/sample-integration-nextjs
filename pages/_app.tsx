@@ -1,7 +1,7 @@
 import App from 'next/app';
 import React from 'react';
 import '../styles.scss';
-import Head from "next/head";
+import Head from 'next/head';
 
 export default class StyledApp extends App {
   render() {
