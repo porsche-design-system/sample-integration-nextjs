@@ -41,6 +41,17 @@ For further documentation regarding designing websites and the correct usage of 
 
 _Note: `./docker.sh run-install` should be executed after every pull._
 
+### Setup prettier
+
+1. Go to Webstorm `Preferences`
+1. Click on the Plugins tab and search for `prettier`
+1. Install prettier
+1. In `Preferences` go to `Languages and Frameworks` -> `Javascript` -> `Prettier`
+1. Set `Prettier Package` to `{PATH_TO_YOUR_DIRECTORY}/porsche-design-system/node_modules/prettier`
+1. Change `Run for files` to `{**/*,*}.{js,ts,jsx,tsx,vue,scss,json,css,html}`
+1. Click checkbox `on save` and apply
+1. You should be good to go.
+
 ### Docker installation steps
 
 1. Register your Docker account on [Hub-Docker](https://hub.docker.com)
