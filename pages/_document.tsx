@@ -1,6 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import React from 'react';
 import { getFontFaceCSS, getPorscheDesignSystemCoreStyles } from '@porsche-design-system/partials';
+import { includeOverlay } from '@porsche-design-system/browser-notification';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -21,6 +22,7 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <div dangerouslySetInnerHTML={{ __html: includeOverlay() }} />
         </body>
       </Html>
     );
