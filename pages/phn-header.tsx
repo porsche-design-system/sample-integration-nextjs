@@ -2,17 +2,20 @@ import { PButton, PIcon, PLinkPure } from '@porsche-design-system/components-rea
 import React from 'react';
 import Header from '../components/header';
 import Head from 'next/head';
+import { applyPolyfills, defineCustomElements as definePorscheNavigation } from '@porschehn/navigation/loader';
 
-/*applyPolyfills().then(() => {
-  definePorscheNavigation(window);
-});*/
+applyPolyfills().then(() => {
+  if (typeof window !== 'undefined') {
+    definePorscheNavigation(window);
+  }
+});
 
 const PhnHeaderPage = (): JSX.Element => (
   <div className="pageLayout">
     <Head>
       <title>NextJS sample project - PHN Header</title>
     </Head>
-{/*    <phn-header env="preview" style={{ position: 'absolute', left: 0, right: 0 }} />*/}
+    <phn-header env="preview" style={{ position: 'absolute', left: 0, right: 0 }} />
     <div style={{ paddingTop: 180 }}>
       <Header />
       <div>
