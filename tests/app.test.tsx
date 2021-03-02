@@ -69,20 +69,6 @@ test('slotted Link should navigate to PDS while mocked', async () => {
   expect(getByText('Slotted Link').closest('a')).toHaveAttribute('href', 'https://designsystem.porsche.com');
 });
 
-test('a wrapped Link should navigate to #hashTest', async () => {
-  const { getByText } = render(<Collection />);
-  const link = getByText(/Test PLinkPure/i);
-
-  expect(link.closest('a')).toHaveAttribute('href', '#hashTest');
-});
-
-test('a wrapped Link should navigate to #hashTest', async () => {
-  const { getByText } = render(<Collection />);
-  const link = getByText(/Test propHash/i);
-
-  expect(link.closest('a')).toHaveAttribute('href', '#propHashTest');
-});
-
 test('pagination should return page 2', async () => {
   const { container, getByText } = render(<Collection />);
 

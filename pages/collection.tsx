@@ -69,14 +69,10 @@ const CollectionPage = (): JSX.Element => {
         </PGridItem>
         {/*Example of all Link variation which are provided by the Porsche Design System*/}
         <PGridItem size="12">
-          <a href="https://www.porsche.com" className={'removeLinkStyle'}>
             <PLink>porsche.com</PLink>
-          </a>
         </PGridItem>
         <PGridItem size="12" className={'contentWrapperBig'}>
-          <a href="#hashTest" className={'removeLinkStyle'}>
             <PLinkPure>Test PLinkPure</PLinkPure>
-          </a>
           <PLinkPure href="#propHashTest">Test propHash</PLinkPure>
         </PGridItem>
         <PGridItem size="12">
