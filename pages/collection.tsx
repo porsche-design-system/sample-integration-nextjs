@@ -19,12 +19,12 @@ const CollectionPage = (): JSX.Element => {
   const [submit, setSubmit] = useState(false);
   const [activePage, setActivePage] = useState(1);
 
-  const handleSubmit = (e: React.MouseEvent<HTMLPButtonElement>): void => {
+  const handleSubmit = (e: React.MouseEvent<{}, MouseEvent>): void => {
     e.preventDefault();
     setSubmit(true);
   };
 
-  const handleDismiss = (e: React.MouseEvent<HTMLPButtonPureElement>): void => {
+  const handleDismiss = (e: React.MouseEvent<{}, MouseEvent>): void => {
     e.preventDefault();
     setSubmit(false);
   };
