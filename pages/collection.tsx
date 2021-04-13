@@ -40,13 +40,13 @@ const CollectionPage = (): JSX.Element => {
       </Head>
       <Header />
       <PGrid>
-        <PGridItem size="12">
+        <PGridItem size={12}>
           <PHeadline variant="headline-4">Buttons</PHeadline>
         </PGridItem>
-        <PGridItem size="12">
+        <PGridItem size={12}>
           <PDivider className="divider" />
         </PGridItem>
-        <PGridItem size="12">
+        <PGridItem size={12}>
           {/*To illustrate the mock procedure during the tests the buttons insert/dismiss a headline*/}
           {submit ? <PHeadline variant="headline-4">Hello</PHeadline> : ''}
           <PButton type="submit" onClick={(e) => handleSubmit(e)}>
@@ -58,47 +58,47 @@ const CollectionPage = (): JSX.Element => {
             Dismiss
           </PButtonPure>
         </PGridItem>
-        <PGridItem size="12">
+        <PGridItem size={12}>
           <PDivider className="divider" />
         </PGridItem>
-        <PGridItem size="12">
+        <PGridItem size={12}>
           <PHeadline variant="headline-4">Links</PHeadline>
         </PGridItem>
-        <PGridItem size="12">
+        <PGridItem size={12}>
           <PDivider className="divider" />
         </PGridItem>
         {/*Example of all Link variation which are provided by the Porsche Design System*/}
-        <PGridItem size="12">
+        <PGridItem size={12}>
             <PLink>porsche.com</PLink>
         </PGridItem>
-        <PGridItem size="12" className={'contentWrapperBig'}>
+        <PGridItem size={12} className={'contentWrapperBig'}>
             <PLinkPure>Test PLinkPure</PLinkPure>
           <PLinkPure href="#propHashTest">Test propHash</PLinkPure>
         </PGridItem>
-        <PGridItem size="12">
+        <PGridItem size={12}>
           <PDivider className="divider" />
         </PGridItem>
-        <PGridItem size="12">
+        <PGridItem size={12}>
           <PHeadline variant="headline-4">Icons</PHeadline>
         </PGridItem>
-        <PGridItem size="12">
+        <PGridItem size={12}>
           <PDivider className="divider" />
         </PGridItem>
-        <PGridItem size="12">
+        <PGridItem size={12}>
           <PSpinner size="small" />
         </PGridItem>
-        <PGridItem size="12">
+        <PGridItem size={12}>
           <PIcon size="medium" name="highway" role="img" />
         </PGridItem>
-        <PGridItem size="12">
+        <PGridItem size={12}>
           <PDivider className="divider" />
         </PGridItem>
-        <PGridItem size="12">
+        <PGridItem size={12}>
           {/* Simple usage of PPagination. By linking state to activePage, we can listen to the pageChange event of
                 the component*/}
           <PHeadline variant="headline-4">You are on Page {activePage} Page</PHeadline>
         </PGridItem>
-        <PGridItem size="12">
+        <PGridItem size={12}>
           <PPagination
             data-testid="pagination"
             totalItemsCount={11}
