@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import React from 'react';
-import { getFontFaceCSS, getPorscheDesignSystemCoreStyles } from '@porsche-design-system/partials';
+import { getFontFaceStylesheet, getInitialStyles } from '@porsche-design-system/components-js/partials';
 import { includeOverlay } from '@porsche-design-system/browser-notification';
 
 class MyDocument extends Document {
@@ -16,8 +16,8 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <link rel="icon" href="/favicon.ico" key="favicon" />
           <link rel="preconnect" href="https://cdn.ui.porsche.com/" key="porscheui-cdn-preconnect" />
-          <link rel="stylesheet" href={getFontFaceCSS({ withoutTags: true })} />
-          <style dangerouslySetInnerHTML={{ __html: getPorscheDesignSystemCoreStyles({ withoutTags: true }) }} />
+          <link rel="stylesheet" href={getFontFaceStylesheet({ withoutTags: true })} />
+          <style dangerouslySetInnerHTML={{ __html: getInitialStyles({ withoutTags: true }) }} />
         </Head>
         <body>
           <Main />
