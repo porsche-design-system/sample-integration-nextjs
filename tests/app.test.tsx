@@ -69,18 +69,3 @@ test('slotted Link should navigate to PDS while mocked', async () => {
   expect(getByText('Slotted Link').closest('a')).toHaveAttribute('href', 'https://designsystem.porsche.com');
 });
 
-test('pagination should return page 2', async () => {
-  const { container, getByText } = render(<Collection />);
-
-  if (!container.querySelector('li[value=NEXT_PAGE_LINK]')) {
-    return;
-  }
-  const nextButton = container.querySelector('li[value=NEXT_PAGE_LINK]');
-
-  if (!nextButton) {
-    return;
-  }
-  fireEvent.click(nextButton);
-
-  expect(getByText('You are on Page 2 Page')).toBeInTheDocument();
-});
