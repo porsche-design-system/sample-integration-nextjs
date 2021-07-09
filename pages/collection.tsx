@@ -34,8 +34,8 @@ const CollectionPage = (): JSX.Element => {
     setSubmit(false);
   };
 
-  const onActivePageChange = (event: CustomEvent): void => {
-    setActivePage(event.detail.page);
+  const onActivePageChange = (e: CustomEvent): void => {
+    setActivePage(e.detail.page);
   };
 
   const onAccordion1Change = useCallback((e: CustomEvent<AccordionChangeEvent>) => {
