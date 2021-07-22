@@ -107,7 +107,7 @@ const FormsPage = (): JSX.Element => {
                   {/*Example of slotted links*/}
                   <span slot="label">
                     Some label with a{' '}
-                    <a data-testid="slottedHref" href={'https://designsystem.porsche.com'}>
+                    <a data-testid="slottedHref" href="https://designsystem.porsche.com">
                       Slotted Link
                     </a>
                     .
