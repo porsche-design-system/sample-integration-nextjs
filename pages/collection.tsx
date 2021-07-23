@@ -53,7 +53,7 @@ const CollectionPage = (): JSX.Element => {
             Submit
           </PButton>
         </PGridItem>
-        <PGridItem className={'contentWrapperSmall'}>
+        <PGridItem size={12} className="contentWrapperSmall">
           <PButtonPure type="submit" onClick={(e) => handleDismiss(e)}>
             Dismiss
           </PButtonPure>
@@ -69,10 +69,10 @@ const CollectionPage = (): JSX.Element => {
         </PGridItem>
         {/*Example of all Link variation which are provided by the Porsche Design System*/}
         <PGridItem size={12}>
-            <PLink>porsche.com</PLink>
+          <PLink>porsche.com</PLink>
         </PGridItem>
-        <PGridItem size={12} className={'contentWrapperBig'}>
-            <PLinkPure>Test PLinkPure</PLinkPure>
+        <PGridItem size={12} className="contentWrapperBig">
+          <PLinkPure>Test PLinkPure</PLinkPure>
           <PLinkPure href="#propHashTest">Test propHash</PLinkPure>
         </PGridItem>
         <PGridItem size={12}>
