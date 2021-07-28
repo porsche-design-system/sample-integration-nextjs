@@ -1,3 +1,4 @@
+import type { AccordionChangeEvent } from '@porsche-design-system/components-react';
 import {
   PButton,
   PButtonPure,
@@ -10,14 +11,18 @@ import {
   PLinkPure,
   PPagination,
   PSpinner,
+  PAccordion,
+  PText
 } from '@porsche-design-system/components-react';
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import Header from '../components/header';
 import Head from 'next/head';
 
 const CollectionPage = (): JSX.Element => {
   const [submit, setSubmit] = useState(false);
   const [activePage, setActivePage] = useState(1);
+  const [isAccordion1Open, setIsAccordion1Open] = useState<boolean>(false);
+  const [isAccordion2Open, setIsAccordion2Open] = useState<boolean>(false);
 
   const handleSubmit = (e: React.MouseEvent<{}, MouseEvent>): void => {
     e.preventDefault();
@@ -32,6 +37,17 @@ const CollectionPage = (): JSX.Element => {
   const handleActivePage = (event: CustomEvent): void => {
     setActivePage(event.detail.page);
   };
+
+  const onAccordion1Change = useCallback((e: CustomEvent<AccordionChangeEvent>) => {
+    setIsAccordion1Open(e.detail.open);
+  }, []);
+  const onAccordion2Change = useCallback((e: CustomEvent<AccordionChangeEvent>) => {
+    setIsAccordion2Open(e.detail.open);
+  }, []);
+
+  const content =
+    'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et ' +
+    'dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.';
 
   return (
     <div className="pageLayout">
@@ -97,6 +113,18 @@ const CollectionPage = (): JSX.Element => {
           {/* Simple usage of PPagination. By linking state to activePage, we can listen to the pageChange event of
                 the component*/}
           <PHeadline variant="headline-4">You are on Page {activePage} Page</PHeadline>
+        </PGridItem>
+        <PGridItem size={12}>
+          <div className="accordion-wrapper">
+            <PAccordion heading="Some Heading" tag="h3" open={isAccordion1Open} onAccordionChange={onAccordion1Change}>
+              <PText>{content}</PText>
+              <PText>{content}</PText>
+            </PAccordion>
+            <PAccordion heading="Some Heading" tag="h3" open={isAccordion2Open} onAccordionChange={onAccordion2Change}>
+              <PText>{content}</PText>
+              <PText>{content}</PText>
+            </PAccordion>
+          </div>
         </PGridItem>
         <PGridItem size={12}>
           <PPagination
