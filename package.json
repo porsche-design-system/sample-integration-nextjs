@@ -14,10 +14,10 @@
     "clean:build": "rm -rf ./out && rm -rf ./.next"
   },
   "dependencies": {
-    "@porsche-design-system/browser-notification": "^2.0.0",
-    "@porsche-design-system/components-react": "2.4.0-beta.2",
+    "@porsche-design-system/browser-notification": "^3.0.0",
+    "@porsche-design-system/components-react": "2.6.1",
     "@porsche-design-system/utilities": "4.0.0",
-    "@porschehn/navigation": "^2.1.0",
+    "@porschehn/navigation": "^2.10.3",
     "next": "10.0.5",
     "react": "17.0.2",
     "react-dom": "17.0.2"
