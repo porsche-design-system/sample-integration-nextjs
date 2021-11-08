@@ -12,7 +12,7 @@ import {
   PPagination,
   PSpinner,
   PAccordion,
-  PText
+  PText,
 } from '@porsche-design-system/components-react';
 import React, { useCallback, useState } from 'react';
 import Header from '../components/header';
@@ -85,10 +85,10 @@ const CollectionPage = (): JSX.Element => {
         </PGridItem>
         {/*Example of all Link variation which are provided by the Porsche Design System*/}
         <PGridItem size={12}>
-          <PLink>porsche.com</PLink>
+          <PLink href="https://porsche.com">porsche.com</PLink>
         </PGridItem>
         <PGridItem size={12} className="contentWrapperBig">
-          <PLinkPure>Test PLinkPure</PLinkPure>
+          <PLinkPure href="https://example.com">Test PLinkPure</PLinkPure>
           <PLinkPure href="#propHashTest">Test propHash</PLinkPure>
         </PGridItem>
         <PGridItem size={12}>
