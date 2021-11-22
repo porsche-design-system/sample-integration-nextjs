@@ -1,4 +1,5 @@
 import type { AccordionChangeEvent } from '@porsche-design-system/components-react';
+import { useToastManager } from '@porsche-design-system/components-react';
 import {
   PButton,
   PButtonPure,
@@ -23,8 +24,10 @@ const CollectionPage = (): JSX.Element => {
   const [activePage, setActivePage] = useState(1);
   const [isAccordion1Open, setIsAccordion1Open] = useState<boolean>(false);
   const [isAccordion2Open, setIsAccordion2Open] = useState<boolean>(false);
+  const { addMessage } = useToastManager();
 
   const handleSubmit = (e: React.MouseEvent<{}, MouseEvent>): void => {
+    addMessage({ text: 'Successful submission', state: 'success' });
     e.preventDefault();
     setSubmit(true);
   };
