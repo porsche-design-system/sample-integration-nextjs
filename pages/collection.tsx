@@ -27,7 +27,7 @@ const CollectionPage = (): JSX.Element => {
   const { addMessage } = useToastManager();
 
   const handleSubmit = (e: React.MouseEvent<{}, MouseEvent>): void => {
-    addMessage({ text: 'Successful submission', state: 'success' });
+    addMessage({ text: 'Submit successful', state: 'success' });
     e.preventDefault();
     setSubmit(true);
   };
