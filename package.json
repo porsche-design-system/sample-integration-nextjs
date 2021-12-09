@@ -14,29 +14,29 @@
     "clean:build": "rm -rf ./out && rm -rf ./.next"
   },
   "dependencies": {
-    "@porsche-design-system/browser-notification": "^3.0.0",
-    "@porsche-design-system/components-react": "2.7.0-beta.2",
-    "@porsche-design-system/utilities": "5.1.0",
-    "@porschehn/navigation": "^2.10.3",
+    "@porsche-design-system/browser-notification": "^4.0.0",
+    "@porsche-design-system/components-react": "2.7.0-beta.6",
+    "@porsche-design-system/utilities": "5.2.0",
+    "@porschehn/navigation": "^2.10.9",
     "next": "10.0.5",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@porsche-design-system/prettier-config": "^1.0.0",
-    "@testing-library/jest-dom": "^5.15.0",
+    "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.2",
-    "@types/node": "^16.11.6",
+    "@types/node": "^16.11.12",
     "@types/react": "^17.0.34",
     "@zeit/next-sass": "^1.0.1",
-    "core-js": "^3.19.1",
-    "jest": "^27.3.1",
-    "node-sass": "^6.0.1",
-    "prettier": "^2.4.1",
+    "core-js": "^3.19.3",
+    "jest": "^27.4.3",
+    "node-sass": "^7.0.0",
+    "prettier": "^2.5.1",
     "regenerator-runtime": "0.13.9",
-    "sass": "^1.43.4",
-    "ts-jest": "^27.0.7",
+    "sass": "^1.44.0",
+    "ts-jest": "^27.1.1",
     "typescript": "^4.4.4"
   }
 }
