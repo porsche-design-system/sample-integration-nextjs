@@ -660,22 +660,22 @@
   resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/browser-notification/-/@porsche-design-system/browser-notification-4.0.0.tgz#8f1c082d682ba2c9a68dcdfaa9d3c6ba4142b900"
   integrity sha1-jxwILWgrosmmjc36qdPGukFCuQA=
 
-"@porsche-design-system/components-js@2.7.0-beta.6":
-  version "2.7.0-beta.6"
-  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.7.0-beta.6.tgz#bfe1c6b926fec56f39db9e274bf0efff96a208d6"
-  integrity sha1-v+HGuSb+xW85254nS/Dv/5aiCNY=
+"@porsche-design-system/components-js@2.7.0-rc.0":
+  version "2.7.0-rc.0"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.7.0-rc.0.tgz#e35962642a25582b679c0a1e676780c593d5c9eb"
+  integrity sha1-41liZColWCtnnAoeZ2eAxZPVyes=
 
 "@porsche-design-system/components-js@^2.6.1":
   version "2.6.1"
   resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.6.1.tgz#d6e45219194b7354591838026e1e896df3765c5f"
   integrity sha1-1uRSGRlLc1RZGDgCbh6JbfN2XF8=
 
-"@porsche-design-system/components-react@2.7.0-beta.6":
-  version "2.7.0-beta.6"
-  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-react/-/@porsche-design-system/components-react-2.7.0-beta.6.tgz#edb3aec97d0601d34f8c4091d5656d8137ab8a95"
-  integrity sha1-7bOuyX0GAdNPjECR1WVtgTeripU=
+"@porsche-design-system/components-react@2.7.0-rc.0":
+  version "2.7.0-rc.0"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-react/-/@porsche-design-system/components-react-2.7.0-rc.0.tgz#e426a3a0feff48f2a1b5b7008480d072e21be5ef"
+  integrity sha1-5CajoP7/SPKhtbcAhIDQcuIb5e8=
   dependencies:
-    "@porsche-design-system/components-js" "2.7.0-beta.6"
+    "@porsche-design-system/components-js" "2.7.0-rc.0"
 
 "@porsche-design-system/prettier-config@^1.0.0":
   version "1.0.0"
