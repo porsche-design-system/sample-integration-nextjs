@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@porsche-design-system/browser-notification": "^4.0.0",
-    "@porsche-design-system/components-react": "2.8.0-rc.0",
+    "@porsche-design-system/components-react": "2.8.0",
     "@porsche-design-system/utilities": "5.2.0",
     "@porschehn/navigation": "^2.10.9",
     "next": "10.0.5",
