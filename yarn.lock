@@ -660,22 +660,22 @@
   resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/browser-notification/-/@porsche-design-system/browser-notification-4.0.0.tgz#8f1c082d682ba2c9a68dcdfaa9d3c6ba4142b900"
   integrity sha1-jxwILWgrosmmjc36qdPGukFCuQA=
 
-"@porsche-design-system/components-js@2.7.0-rc.0":
-  version "2.7.0-rc.0"
-  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.7.0-rc.0.tgz#e35962642a25582b679c0a1e676780c593d5c9eb"
-  integrity sha1-41liZColWCtnnAoeZ2eAxZPVyes=
+"@porsche-design-system/components-js@2.8.0-rc.0":
+  version "2.8.0-rc.0"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.8.0-rc.0.tgz#3e86e0d1e891c476aedb2ae853d7cf855f4fb347"
+  integrity sha1-Pobg0eiRxHau2yroU9fPhV9Ps0c=
 
 "@porsche-design-system/components-js@^2.6.1":
   version "2.6.1"
   resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.6.1.tgz#d6e45219194b7354591838026e1e896df3765c5f"
   integrity sha1-1uRSGRlLc1RZGDgCbh6JbfN2XF8=
 
-"@porsche-design-system/components-react@2.7.0-rc.0":
-  version "2.7.0-rc.0"
-  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-react/-/@porsche-design-system/components-react-2.7.0-rc.0.tgz#e426a3a0feff48f2a1b5b7008480d072e21be5ef"
-  integrity sha1-5CajoP7/SPKhtbcAhIDQcuIb5e8=
+"@porsche-design-system/components-react@2.8.0-rc.0":
+  version "2.8.0-rc.0"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-react/-/@porsche-design-system/components-react-2.8.0-rc.0.tgz#b1aca470270bbaf7ac9e2431d9157da7a9a68a5f"
+  integrity sha1-saykcCcLuvesniQx2RV9p6mmil8=
   dependencies:
-    "@porsche-design-system/components-js" "2.7.0-rc.0"
+    "@porsche-design-system/components-js" "2.8.0-rc.0"
 
 "@porsche-design-system/prettier-config@^1.0.0":
   version "1.0.0"
