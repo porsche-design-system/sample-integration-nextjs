@@ -14,7 +14,7 @@
     "clean:build": "rm -rf ./out && rm -rf ./.next"
   },
   "dependencies": {
-    "@porsche-design-system/browser-notification": "^4.0.0",
+    "@porsche-design-system/browser-notification": "^4.1.1",
     "@porsche-design-system/components-react": "2.8.0",
     "@porsche-design-system/utilities": "5.2.0",
     "@porschehn/navigation": "^2.10.9",
