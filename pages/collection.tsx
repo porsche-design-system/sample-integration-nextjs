@@ -1,5 +1,4 @@
 import type { AccordionChangeEvent } from '@porsche-design-system/components-react';
-import { useToastManager } from '@porsche-design-system/components-react';
 import {
   PButton,
   PButtonPure,
@@ -11,9 +10,11 @@ import {
   PLink,
   PLinkPure,
   PPagination,
+  PPopover,
   PSpinner,
   PAccordion,
   PText,
+  useToastManager,
 } from '@porsche-design-system/components-react';
 import React, { useCallback, useState } from 'react';
 import Header from '../components/header';
@@ -113,21 +114,29 @@ const CollectionPage = (): JSX.Element => {
           <PDivider className="divider" />
         </PGridItem>
         <PGridItem size={12}>
+          <PHeadline variant="headline-4">Accordion</PHeadline>
+        </PGridItem>
+        <PGridItem size={12}>
+          <PDivider className="divider" />
+        </PGridItem>
+        <PGridItem size={12}>
+          <PText>
+            Lorem ipsum dolor sit amet, <PPopover>Some descriptive content</PPopover> consetetur sadipscing elitr, sed
+            diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            <PPopover description="Short info opened top" direction="top"></PPopover>
+            sed diam voluptua.
+          </PText>
+        </PGridItem>
+        <PGridItem size={12}>
+          <PDivider className="divider" />
+        </PGridItem>
+        <PGridItem size={12}>
           {/* Simple usage of PPagination. By linking state to activePage, we can listen to the pageChange event of
                 the component*/}
           <PHeadline variant="headline-4">You are on Page {activePage} Page</PHeadline>
         </PGridItem>
         <PGridItem size={12}>
-          <div className="accordion-wrapper">
-            <PAccordion heading="Some Heading" tag="h3" open={isAccordion1Open} onAccordionChange={onAccordion1Change}>
-              <PText>{content}</PText>
-              <PText>{content}</PText>
-            </PAccordion>
-            <PAccordion heading="Some Heading" tag="h3" open={isAccordion2Open} onAccordionChange={onAccordion2Change}>
-              <PText>{content}</PText>
-              <PText>{content}</PText>
-            </PAccordion>
-          </div>
+          <PDivider className="divider" />
         </PGridItem>
         <PGridItem size={12}>
           <PPagination
