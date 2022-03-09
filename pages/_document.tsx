@@ -3,7 +3,6 @@ import React from 'react';
 import {
   getFontFaceStylesheet,
   getInitialStyles,
-  getLoaderScript,
   getIconLinks,
   getMetaTagsAndIconLinks,
   getComponentChunkLinks,
@@ -24,20 +23,19 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <link rel="icon" href="/favicon.ico" key="favicon" />
           {getFontFaceStylesheet({ format: 'jsx' })}
-          {getInitialStyles({ format: 'jsx' })}
           {getComponentChunkLinks({ format: 'jsx' })}
           {getFontLinks({ format: 'jsx' })}
           {getIconLinks({ format: 'jsx' })}
           {getMetaTagsAndIconLinks({ appTitle: 'Sample Project NextJS', format: 'jsx' })}
+          {getInitialStyles({ format: 'jsx' })}
         </Head>
 
         <body>
           <Main />
           <NextScript />
-          {getLoaderScript({ format: 'jsx' })}
-          <div dangerouslySetInnerHTML={{ __html: includeBanner() }} />
-          <div dangerouslySetInnerHTML={{ __html: includeCookieOverlay() }} />
-          <div dangerouslySetInnerHTML={{ __html: includeOverlay() }} />
+          {/* getLoaderScript partial makes no sense in this context and breaks the app in dev mode */}
+          {/* {getLoaderScript({ format: 'jsx' })} */}
+          <div dangerouslySetInnerHTML={{ __html: includeBanner() + includeOverlay() + includeCookieOverlay() }} />
         </body>
       </Html>
     );
