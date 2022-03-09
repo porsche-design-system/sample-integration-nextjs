@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript, DocumentInitialProps, DocumentContext } from 'next/document';
 import React from 'react';
 import {
   getFontFaceStylesheet,
@@ -12,7 +12,7 @@ import {
 import { includeOverlay, includeCookieOverlay, includeBanner } from '@porsche-design-system/browser-notification';
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
@@ -30,6 +30,7 @@ class MyDocument extends Document {
           {getIconLinks({ format: 'jsx' })}
           {getMetaTagsAndIconLinks({ appTitle: 'Sample Project NextJS', format: 'jsx' })}
         </Head>
+
         <body>
           <Main />
           <NextScript />
