@@ -580,17 +580,22 @@
   resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/browser-notification/-/@porsche-design-system/browser-notification-4.1.1.tgz#f553e114b2fa4903dfe38ea4add682d13a47ec72"
   integrity sha1-9VPhFLL6SQPf446krdaC0TpH7HI=
 
-"@porsche-design-system/components-js@2.9.0", "@porsche-design-system/components-js@^2.8.0":
+"@porsche-design-system/components-js@2.9.1-rc.0":
+  version "2.9.1-rc.0"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.9.1-rc.0.tgz#3ceafacf0416364ba1ee9f74a4daf2b3b7f3e9b0"
+  integrity sha512-4+ZSnJdd0BPqETN3R2ZQMxeKSeUUKMTTjMgjYdJjFxPqOq+bfxL9eOrh3YdnLTJ9V8lfuCF+BMljofyZr/6X7g==
+
+"@porsche-design-system/components-js@^2.8.0":
   version "2.9.0"
   resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.9.0.tgz#ca08acb3a5a24f6512199395cdf63bd98ccfd313"
   integrity sha512-tNDndcPqddVkw7d9TEUee8FN///QwkpjyuaFCf3Yh7FntFhnfZnP98Xc737QdF08xzYrZR3XK5/t7RQXZiSWpw==
 
-"@porsche-design-system/components-react@2.9.0":
-  version "2.9.0"
-  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-react/-/@porsche-design-system/components-react-2.9.0.tgz#e6ae0a700ca2f161f1a81188955e907fc3d741af"
-  integrity sha512-miVj0HgEU3K7P/RHG33YXFtESjNhaRExenpnNSvjZYvJuwNlP0zX2ZPXFWM06Ut/jL8uJT//shUd2YsUDfeevA==
+"@porsche-design-system/components-react@2.9.1-rc.0":
+  version "2.9.1-rc.0"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-react/-/@porsche-design-system/components-react-2.9.1-rc.0.tgz#a7f0fc07d40c56cc43ddfa55ea1bb7081f57d2ab"
+  integrity sha512-oX+g9ZRtVm8kp299/hB0xtxBOr/otDBpk7YmM9pOShhss/ZLnl7oBQxqKvTm25l9qxHLmWmDfK91ysi26tdQ7Q==
   dependencies:
-    "@porsche-design-system/components-js" "2.9.0"
+    "@porsche-design-system/components-js" "2.9.1-rc.0"
 
 "@porsche-design-system/prettier-config@^1.0.0":
   version "1.0.0"
@@ -670,10 +675,10 @@
     lodash "^4.17.15"
     redent "^3.0.0"
 
-"@testing-library/react@^12.1.3":
-  version "12.1.3"
-  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-12.1.3.tgz#ef26c5f122661ea9b6f672b23dc6b328cadbbf26"
-  integrity sha512-oCULRXWRrBtC9m6G/WohPo1GLcLesH7T4fuKzRAKn1CWVu9BzXtqLXDDTA6KhFNNtRwLtfSMr20HFl+Qrdrvmg==
+"@testing-library/react@^12.1.4":
+  version "12.1.4"
+  resolved "https://registry.yarnpkg.com/@testing-library/react/-/react-12.1.4.tgz#09674b117e550af713db3f4ec4c0942aa8bbf2c0"
+  integrity sha512-jiPKOm7vyUw311Hn/HlNQ9P8/lHNtArAx0PisXyFixDDvfl8DbD6EUdbshK5eqauvBSvzZd19itqQ9j3nferJA==
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^8.0.0"
