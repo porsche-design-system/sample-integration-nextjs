@@ -1,4 +1,4 @@
-import { PDivider, PGrid, PGridItem, PHeadline } from '@porsche-design-system/components-react';
+import { PDivider, PHeadline } from '@porsche-design-system/components-react';
 import React from 'react';
 import PrefixedLink from './prefixedLink';
 
