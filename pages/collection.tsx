@@ -45,6 +45,7 @@ const CollectionPage = (): JSX.Element => {
   const onAccordion1Change = useCallback((e: CustomEvent<AccordionChangeEvent>) => {
     setIsAccordion1Open(e.detail.open);
   }, []);
+
   const onAccordion2Change = useCallback((e: CustomEvent<AccordionChangeEvent>) => {
     setIsAccordion2Open(e.detail.open);
   }, []);
@@ -62,64 +63,64 @@ const CollectionPage = (): JSX.Element => {
       <PGrid>
         <PGridItem size={12}>
           <PHeadline variant="headline-4">Buttons</PHeadline>
-        </PGridItem>
-        <PGridItem size={12}>
           <PDivider className="divider" />
-        </PGridItem>
-        <PGridItem size={12}>
-          {/*To illustrate the mock procedure during the tests the buttons insert/dismiss a headline*/}
-          {submit ? <PHeadline variant="headline-4">Hello</PHeadline> : ''}
-          <PButton type="submit" onClick={(e) => handleSubmit(e)}>
+          {/* To illustrate the mock procedure during the tests the buttons insert/dismiss a headline */}
+          {submit && <PHeadline variant="headline-4">Hello</PHeadline>}
+          <PButton type="submit" onClick={handleSubmit}>
             Submit
           </PButton>
         </PGridItem>
         <PGridItem size={12} className="contentWrapperSmall">
-          <PButtonPure type="submit" onClick={(e) => handleDismiss(e)}>
+          <PButtonPure type="submit" onClick={handleDismiss}>
             Dismiss
           </PButtonPure>
         </PGridItem>
+
         <PGridItem size={12}>
           <PDivider className="divider" />
-        </PGridItem>
-        <PGridItem size={12}>
           <PHeadline variant="headline-4">Links</PHeadline>
-        </PGridItem>
-        <PGridItem size={12}>
           <PDivider className="divider" />
-        </PGridItem>
-        {/*Example of all Link variation which are provided by the Porsche Design System*/}
-        <PGridItem size={12}>
+
+          {/* Example of all Link variation which are provided by the Porsche Design System */}
           <PLink href="https://porsche.com">porsche.com</PLink>
         </PGridItem>
         <PGridItem size={12} className="contentWrapperBig">
           <PLinkPure href="https://example.com">Test PLinkPure</PLinkPure>
           <PLinkPure href="#propHashTest">Test propHash</PLinkPure>
         </PGridItem>
+
         <PGridItem size={12}>
           <PDivider className="divider" />
-        </PGridItem>
-        <PGridItem size={12}>
           <PHeadline variant="headline-4">Icons</PHeadline>
-        </PGridItem>
-        <PGridItem size={12}>
           <PDivider className="divider" />
-        </PGridItem>
-        <PGridItem size={12}>
+
           <PSpinner size="small" />
         </PGridItem>
         <PGridItem size={12}>
           <PIcon size="medium" name="highway" role="img" />
         </PGridItem>
+
         <PGridItem size={12}>
           <PDivider className="divider" />
-        </PGridItem>
-        <PGridItem size={12}>
           <PHeadline variant="headline-4">Accordion</PHeadline>
+          <PDivider className="divider" />
+
+          <div className="accordion-wrapper">
+            <PAccordion heading="Some Heading" tag="h3" open={isAccordion1Open} onAccordionChange={onAccordion1Change}>
+              <PText>{content}</PText>
+              <PText>{content}</PText>
+            </PAccordion>
+            <PAccordion heading="Some Heading" tag="h3" open={isAccordion2Open} onAccordionChange={onAccordion2Change}>
+              <PText>{content}</PText>
+              <PText>{content}</PText>
+            </PAccordion>
+          </div>
         </PGridItem>
+
         <PGridItem size={12}>
           <PDivider className="divider" />
-        </PGridItem>
-        <PGridItem size={12}>
+          <PHeadline variant="headline-4">Popover</PHeadline>
+          <PDivider className="divider" />
           <PText>
             Lorem ipsum dolor sit amet, <PPopover>Some descriptive content</PPopover> consetetur sadipscing elitr, sed
             diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
@@ -127,24 +128,20 @@ const CollectionPage = (): JSX.Element => {
             sed diam voluptua.
           </PText>
         </PGridItem>
+
         <PGridItem size={12}>
           <PDivider className="divider" />
-        </PGridItem>
-        <PGridItem size={12}>
           {/* Simple usage of PPagination. By linking state to activePage, we can listen to the pageChange event of
                 the component*/}
           <PHeadline variant="headline-4">You are on Page {activePage} Page</PHeadline>
-        </PGridItem>
-        <PGridItem size={12}>
           <PDivider className="divider" />
-        </PGridItem>
-        <PGridItem size={12}>
+
           <PPagination
             data-testid="pagination"
             totalItemsCount={11}
             itemsPerPage={3}
             activePage={activePage}
-            onPageChange={(e) => handleActivePage(e)}
+            onPageChange={handleActivePage}
           />
         </PGridItem>
       </PGrid>
