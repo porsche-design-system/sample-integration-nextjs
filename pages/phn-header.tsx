@@ -16,19 +16,18 @@ const PhnHeaderPage = (): JSX.Element => (
       <title>NextJS sample project - PHN Header</title>
     </Head>
     <phn-header env="preview" style={{ position: 'absolute', left: 0, right: 0 }} />
+
     <div style={{ paddingTop: 180 }}>
       <Header />
-      <div>
-        <PButton>Some PButton</PButton>
-      </div>
-      <div>
-        <PLinkPure>Some PLinkPure</PLinkPure>
-      </div>
-      <div>
-        <PIcon name="configurate" />
-        <PIcon name="compare" />
-        <PIcon name="search" />
-      </div>
+      <PButton>Some PButton</PButton>
+      <br />
+      <br />
+      <PLinkPure href="https://porsche.com">Some PLinkPure</PLinkPure>
+      <br />
+      <br />
+      <PIcon name="configurate" />
+      <PIcon name="compare" />
+      <PIcon name="search" />
     </div>
   </div>
 );
