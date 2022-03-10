@@ -1,3 +1,8 @@
+const BASE_PATH = process.env.CI ? '/sample-integration-nextjs' : '';
+
 module.exports = {
-  assetPrefix: process.env.CI ? '/sample-integration-nextjs' : '',
+  assetPrefix: BASE_PATH,
+  env: {
+    BASE_PATH,
+  },
 };
