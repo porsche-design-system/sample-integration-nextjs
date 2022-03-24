@@ -580,22 +580,22 @@
   resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/browser-notification/-/@porsche-design-system/browser-notification-4.1.1.tgz#f553e114b2fa4903dfe38ea4add682d13a47ec72"
   integrity sha1-9VPhFLL6SQPf446krdaC0TpH7HI=
 
-"@porsche-design-system/components-js@2.9.1-rc.0":
-  version "2.9.1-rc.0"
-  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.9.1-rc.0.tgz#3ceafacf0416364ba1ee9f74a4daf2b3b7f3e9b0"
-  integrity sha512-4+ZSnJdd0BPqETN3R2ZQMxeKSeUUKMTTjMgjYdJjFxPqOq+bfxL9eOrh3YdnLTJ9V8lfuCF+BMljofyZr/6X7g==
+"@porsche-design-system/components-js@2.9.2-rc.1":
+  version "2.9.2-rc.1"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.9.2-rc.1.tgz#ede196e404c53e9cc8756a5506c0a0cd314b0251"
+  integrity sha512-O9XUAXtlOVBb8aGQxVfsT6ejE+b7XO6wD6trHhxwLckb/ifQVOdLcgAdl7JpK9RQyoRl2JL0zWDomk+8capVCg==
 
 "@porsche-design-system/components-js@^2.8.0":
   version "2.9.0"
   resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.9.0.tgz#ca08acb3a5a24f6512199395cdf63bd98ccfd313"
   integrity sha512-tNDndcPqddVkw7d9TEUee8FN///QwkpjyuaFCf3Yh7FntFhnfZnP98Xc737QdF08xzYrZR3XK5/t7RQXZiSWpw==
 
-"@porsche-design-system/components-react@2.9.1-rc.0":
-  version "2.9.1-rc.0"
-  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-react/-/@porsche-design-system/components-react-2.9.1-rc.0.tgz#a7f0fc07d40c56cc43ddfa55ea1bb7081f57d2ab"
-  integrity sha512-oX+g9ZRtVm8kp299/hB0xtxBOr/otDBpk7YmM9pOShhss/ZLnl7oBQxqKvTm25l9qxHLmWmDfK91ysi26tdQ7Q==
+"@porsche-design-system/components-react@2.9.2-rc.1":
+  version "2.9.2-rc.1"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-react/-/@porsche-design-system/components-react-2.9.2-rc.1.tgz#cd76da8c20a05be43e6c82fbfc63feeccfba720e"
+  integrity sha512-K7xjsDT5I13DvizlNB3r+UjM0UEnRreJB143TVksJgayiZKdvovOT0JgQuUtm5W/93KBMuTNF52jrNNlWzUXXA==
   dependencies:
-    "@porsche-design-system/components-js" "2.9.1-rc.0"
+    "@porsche-design-system/components-js" "2.9.2-rc.1"
 
 "@porsche-design-system/prettier-config@^1.0.0":
   version "1.0.0"
