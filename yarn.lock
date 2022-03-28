@@ -604,10 +604,10 @@
   dependencies:
     csstype "^3.0.9"
 
-"@porschehn/navigation@^2.13.2":
-  version "2.14.1"
-  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porschehn/navigation/-/@porschehn/navigation-2.14.1.tgz#184cd68a64f1baf031cd3d3d6d119e81c86a5d5f"
-  integrity sha512-9uQXw2J6ihJrmflk5GJdXbj6bC5hVvJgGVrUJakOBW7PM1tqMPs5k6UgQcvre4EDEz0e2WWPIcRKGXhj+wnO2Q==
+"@porschehn/navigation@~2.14.2":
+  version "2.14.2"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porschehn/navigation/-/@porschehn/navigation-2.14.2.tgz#514f1fa7e9e4e4d89eeb0b9fcf9e2526dccbf98d"
+  integrity sha512-50cgs8fMFuMkPvvFyZdFBP4ZzUR8t0No7RYsukSPfOAMHb8ApGwQz8hO5cVhrM5C5ZgThYZDaZl0ilPMedzz0A==
   dependencies:
     "@openid/appauth" "^1.2.6"
     "@porsche-design-system/components-js" "^2.9.1"
