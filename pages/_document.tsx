@@ -8,6 +8,7 @@ import {
   getComponentChunkLinks,
   getFontLinks,
 } from '@porsche-design-system/components-react/partials';
+import { partials } from '@porschehn/navigation/dist/porsche-navigation/partials'
 import { includeOverlay, includeCookieOverlay, includeBanner } from '@porsche-design-system/browser-notification';
 
 class MyDocument extends Document {
@@ -28,6 +29,7 @@ class MyDocument extends Document {
           {getIconLinks({ format: 'jsx' })}
           {getMetaTagsAndIconLinks({ appTitle: 'Sample Project NextJS', format: 'jsx' })}
           {getInitialStyles({ format: 'jsx' })}
+          <div dangerouslySetInnerHTML={{ __html: partials() }} />
         </Head>
 
         <body>
