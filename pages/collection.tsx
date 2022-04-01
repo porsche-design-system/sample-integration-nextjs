@@ -85,7 +85,9 @@ const CollectionPage = (): JSX.Element => {
           <PLink href="https://porsche.com">porsche.com</PLink>
         </PGridItem>
         <PGridItem size={12} className="contentWrapperBig">
-          <PLinkPure href="https://example.com">Test PLinkPure</PLinkPure>
+          <PLinkPure href="https://example.com" stretch={true}>
+            Test PLinkPure
+          </PLinkPure>
           <PLinkPure href="#propHashTest">Test propHash</PLinkPure>
         </PGridItem>
 

@@ -580,17 +580,22 @@
   resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/browser-notification/-/@porsche-design-system/browser-notification-4.1.1.tgz#f553e114b2fa4903dfe38ea4add682d13a47ec72"
   integrity sha1-9VPhFLL6SQPf446krdaC0TpH7HI=
 
-"@porsche-design-system/components-js@2.9.2", "@porsche-design-system/components-js@^2.9.1":
+"@porsche-design-system/components-js@2.9.3-rc.0-skeletons":
+  version "2.9.3-rc.0-skeletons"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.9.3-rc.0-skeletons.tgz#c5532ed10027245e9bd7ed1e5fa9ce21c832d6f3"
+  integrity sha512-KHJhmCzHpXB+ZXQwj0ZwUT+iGRWGUEUzM7MCGmdFZIyVvTC2zBi1SPTG2js4/4TZIfck1Z8RkWe13BCDbMMdlA==
+
+"@porsche-design-system/components-js@^2.8.0":
   version "2.9.2"
   resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-js/-/@porsche-design-system/components-js-2.9.2.tgz#81e2b0cc22629922157068e431d168cecfc67862"
   integrity sha512-8KNzr/j+CBni3zoBXWZsKm5PZIMVChvQcG66SEB4u3nu5tztrDlpExkRZlDQEKDed2B0mHj7WxTpx2yfyqcq8g==
 
-"@porsche-design-system/components-react@2.9.2":
-  version "2.9.2"
-  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-react/-/@porsche-design-system/components-react-2.9.2.tgz#ceacee4980528ff735b05a20ef6b597c73980bc2"
-  integrity sha512-UEoS9gODvBByb5wBSe9fCCshghArtbJD4jgTdDJI3Ojd2RJf5rEC2sf+eMDzQPo51XcqkdO4XqVYhzaEIyctSA==
+"@porsche-design-system/components-react@2.9.3-rc.0-skeletons":
+  version "2.9.3-rc.0-skeletons"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porsche-design-system/components-react/-/@porsche-design-system/components-react-2.9.3-rc.0-skeletons.tgz#87e3c6172e94f44f1c3956b18f98d523f93ee5b2"
+  integrity sha512-UpXsqPbQ/RsOznlw9SROfsSVleybuZZ+iwLmUMb9VbAQI+6eITHs8OfBni8jOtxHhj8gql4OxAjOx7idd/lGIw==
   dependencies:
-    "@porsche-design-system/components-js" "2.9.2"
+    "@porsche-design-system/components-js" "2.9.3-rc.0-skeletons"
 
 "@porsche-design-system/prettier-config@^1.0.0":
   version "1.0.0"
@@ -604,16 +609,17 @@
   dependencies:
     csstype "^3.0.9"
 
-"@porschehn/navigation@^2.13.2":
-  version "2.14.1"
-  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porschehn/navigation/-/@porschehn/navigation-2.14.1.tgz#184cd68a64f1baf031cd3d3d6d119e81c86a5d5f"
-  integrity sha512-9uQXw2J6ihJrmflk5GJdXbj6bC5hVvJgGVrUJakOBW7PM1tqMPs5k6UgQcvre4EDEz0e2WWPIcRKGXhj+wnO2Q==
+"@porschehn/navigation@~2.13.2":
+  version "2.13.2"
+  resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porschehn/navigation/-/@porschehn/navigation-2.13.2.tgz#8aca9d235a16f46619919b53aa2b5f0c6a7d1df2"
+  integrity sha512-t4WEYEr/er4EMmsices/+tmxwC60LHj5aWSAdHh9YeZlHpYtquRK0jArVz5GBdCmIv7PiFpMvI72E2Qjt8+ZfA==
   dependencies:
     "@openid/appauth" "^1.2.6"
-    "@porsche-design-system/components-js" "^2.9.1"
+    "@porsche-design-system/components-js" "^2.8.0"
     "@porsche-design-system/utilities" "^5.2.0"
     "@stencil/core" "2.13.0"
     "@stencil/store" "^1.5.0"
+    gsap "^3.4.2"
     uuid "^8.1.0"
 
 "@sinonjs/commons@^1.7.0":
@@ -1521,6 +1527,11 @@ graceful-fs@^4.2.9:
   version "4.2.9"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.9.tgz#041b05df45755e587a24942279b9d113146e1c96"
   integrity sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ==
+
+gsap@^3.4.2:
+  version "3.10.2"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.10.2.tgz#a3b0a842c398099fc7a80313bfb42253a3dc2b6b"
+  integrity sha512-exJVOda3O1NpgGjM4dzZONmSODWFP+JF/DwfiBfCPQPr15nm3M0TQczYKLZlMdBNdWxHMvRPKVqc1e1/6YD+zA==
 
 has-flag@^3.0.0:
   version "3.0.0"
