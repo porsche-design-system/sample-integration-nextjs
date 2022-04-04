@@ -27,9 +27,22 @@ class MyDocument extends Document {
           {getFontLinks({ format: 'jsx' })}
           {getIconLinks({ format: 'jsx' })}
           {getMetaTagsAndIconLinks({ appTitle: 'Sample Project NextJS', format: 'jsx' })}
-          {getInitialStyles({ format: 'jsx' })}
+          {getInitialStyles({
+            format: 'jsx',
+            skeletonTagNames: [
+              'p-button',
+              'p-button-pure',
+              'p-checkbox-wrapper',
+              'p-fieldset-wrapper',
+              'p-link',
+              'p-link-pure',
+              'p-radio-button-wrapper',
+              'p-select-wrapper',
+              'p-textarea-wrapper',
+              'p-text-field-wrapper',
+            ],
+          })}
         </Head>
-
         <body>
           <Main />
           <NextScript />
