@@ -13,7 +13,7 @@ export default class StyledApp extends App {
           <title>NextJS sample project</title>
           <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         </Head>
-        <PorscheDesignSystemProvider>
+        <PorscheDesignSystemProvider usesSkeletons={true}>
           <Component {...pageProps} />
           <PToast />
         </PorscheDesignSystemProvider>
