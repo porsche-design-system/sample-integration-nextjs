@@ -16,7 +16,7 @@ const PhnHeaderPage = (): JSX.Element => {
       <Head>
         <title>NextJS sample project - PHN Header</title>
       </Head>
-      <phn-header env="preview" style={{ position: 'absolute', left: 0, right: 0 }} />
+      <phn-header env="preview" locale="de" style={{ position: 'absolute', left: 0, right: 0 }} />
 
       <div style={{ paddingTop: 180 }}>
         <Header />
