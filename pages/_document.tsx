@@ -27,6 +27,8 @@ class MyDocument extends Document {
           {getFontLinks({ format: 'jsx' })}
           {getIconLinks({ format: 'jsx' })}
           {getMetaTagsAndIconLinks({ appTitle: 'Sample Project NextJS', format: 'jsx' })}
+          {/* 
+          // @ts-ignore */}
           {getInitialStyles({
             format: 'jsx',
             skeletonTagNames: [
