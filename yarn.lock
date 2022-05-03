@@ -615,7 +615,7 @@
   dependencies:
     csstype "^3.0.9"
 
-"@porschehn/navigation@~2.15.0":
+"@porschehn/navigation@^2.15.0":
   version "2.15.0"
   resolved "https://porscheui.jfrog.io/porscheui/api/npm/npm/@porschehn/navigation/-/@porschehn/navigation-2.15.0.tgz#46b7f2dbf2c53375f86e505a1a59b5ffcbc863c3"
   integrity sha512-YDkj2JUN4Z3e0lfFadXLFcOo/digMHxQyfvw+yNUwXCmBV/6VbnAvunMJQSPWkVtpILPsFgGO+fCXtH4mrrEQw==
