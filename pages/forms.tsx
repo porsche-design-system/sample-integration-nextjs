@@ -1,4 +1,11 @@
+import type {
+  SegmentedControlChangeEvent,
+  StepChangeEvent,
+  StepperState,
+} from '@porsche-design-system/components-react';
 import {
+  PButton,
+  PButtonGroup,
   PCheckboxWrapper,
   PDivider,
   PFlex,
@@ -8,14 +15,21 @@ import {
   PSegmentedControl,
   PSegmentedControlItem,
   PSelectWrapper,
+  PStepperHorizontal,
+  PStepperHorizontalItem,
   PText,
   PTextareaWrapper,
   PTextFieldWrapper,
-  SegmentedControlChangeEvent,
 } from '@porsche-design-system/components-react';
 import React, { ChangeEvent, FormEvent, useCallback, useState } from 'react';
 import Header from '../components/header';
 import Head from 'next/head';
+
+type StepperHorizontalItemProps = {
+  state?: StepperState;
+  name: string;
+};
+
 
 const FormsPage = (): JSX.Element => {
   const [select, setSelect] = useState('Change this Headline by selecting');
@@ -23,6 +37,24 @@ const FormsPage = (): JSX.Element => {
   const [radioButton, setRadioButton] = useState(false);
   const [textField, setTextField] = useState('Change this Headline by typing');
   const [currentValue, setCurrentValue] = useState(1);
+  const [steps, setSteps] = useState<StepperHorizontalItemProps[]>([
+    {
+      state: 'current',
+      name: 'Enter personal details',
+    },
+    {
+      name: 'Confirm e-mail',
+    },
+    {
+      name: 'Set password',
+    },
+  ]);
+
+  const stepContent: string[] = [
+    'A form with personal details could be displayed here.',
+    'A form with a verification code input field could be displayed here.',
+    'A form with a password input field could be displayed here.',
+  ];
 
   const onSegmentedControlChange = useCallback((e: CustomEvent<SegmentedControlChangeEvent>) => {
     setCurrentValue(e.detail.value as number);
@@ -47,6 +79,37 @@ const FormsPage = (): JSX.Element => {
   const handleTextField = (e: ChangeEvent<HTMLInputElement>): void => {
     setTextField(e.target.value);
   };
+
+  const getActiveStepIndex = (steps: StepperHorizontalItemProps[]): number =>
+      steps.findIndex((step) => step.state === 'current');
+
+  const onNextPrevStep = (direction: 'next' | 'prev'): void => {
+    const newState = [...steps];
+    const activeStepIndex = getActiveStepIndex(newState);
+
+    if (direction === 'next') {
+      newState[activeStepIndex].state = 'complete';
+      newState[activeStepIndex + 1].state = 'current';
+    } else {
+      delete newState[activeStepIndex].state;
+      newState[activeStepIndex - 1].state = 'current';
+    }
+
+    setSteps(newState);
+  };
+
+  const handleStepChange = (e: CustomEvent<StepChangeEvent>): void => {
+    const { activeStepIndex } = e.detail;
+
+    const newState = [...steps];
+    for (let i = activeStepIndex + 1; i < newState.length; i++) {
+      // reset step state when going back via stepper horizontal item click
+      delete newState[i].state;
+    }
+    newState[activeStepIndex].state = 'current';
+    setSteps(newState);
+  };
+
 
   return (
     <div className="pageLayout">
@@ -88,6 +151,39 @@ const FormsPage = (): JSX.Element => {
             <PSegmentedControlItem value={5}>Option 5</PSegmentedControlItem>
           </PSegmentedControl>
           <PText>Current value of segmented-control: {currentValue}</PText>
+        </PFlexItem>
+        <PFlexItem>
+          <PDivider className="divider" />
+        </PFlexItem>
+        <PFlexItem>
+          <PStepperHorizontal onStepChange={handleStepChange}>
+            {steps.map(({ state, name }) => (
+                <PStepperHorizontalItem key={name} state={state}>
+                  {name}
+                </PStepperHorizontalItem>
+            ))}
+          </PStepperHorizontal>
+
+          {stepContent.map((content, i) => getActiveStepIndex(steps) === i && <PText key={i}>{content}</PText>)}
+
+          <PButtonGroup>
+            <PButton
+                icon="arrow-head-left"
+                variant="tertiary"
+                onClick={() => onNextPrevStep('prev')}
+                disabled={getActiveStepIndex(steps) === 0}
+            >
+              Previous Step
+            </PButton>
+
+            <PButton
+                variant="primary"
+                disabled={getActiveStepIndex(steps) === steps.length - 1}
+                onClick={() => onNextPrevStep('next')}
+            >
+              Next Step
+            </PButton>
+          </PButtonGroup>
         </PFlexItem>
         <PFlexItem>
           <PDivider className="divider" />
