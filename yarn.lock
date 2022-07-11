@@ -593,22 +593,17 @@
     form-data "^4.0.0"
     opener "^1.5.2"
 
-"@porsche-design-system/browser-notification@^4.1.2":
-  version "4.1.4"
-  resolved "https://registry.yarnpkg.com/@porsche-design-system/browser-notification/-/browser-notification-4.1.4.tgz#2a33870f67da42ad67e891e3910493b6fbcdcfcd"
-  integrity sha512-M/vdngr9ANMbM8A0p2fMpDVwNT4qDh4R8WCPaXneBCCN6DA/wnarqvj1AnkJlmordWArs8AZLn7olwIOgLTwKg==
+"@porsche-design-system/components-js@2.11.0", "@porsche-design-system/components-js@2.14.0-rc.1":
+  version "2.14.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-2.14.0-rc.1.tgz#aa5346a2d2fb37530a83bbc7227dad882b270b59"
+  integrity sha512-1hoFz50tvweFjj5Kx8o73xmGuz64ViKhA7T46jR6aj6xpPwH/C0RCUBb26SJmjn4lekLugLybou/DtCxKX0SzA==
 
-"@porsche-design-system/components-js@2.11.0", "@porsche-design-system/components-js@2.13.0-rc.5":
-  version "2.13.0-rc.5"
-  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-2.13.0-rc.5.tgz#0050037236aee96cfaafd3f57c1f5063eb39339a"
-  integrity sha512-MZ0ePfdT1mefeDVWoA2wagPiP6Zjx/SWBV08nmpoCNuxf4c+9FJj2y8vWcnPlpdgY54Ey+xV/pW2r+HAc49zPg==
-
-"@porsche-design-system/components-react@2.13.0-rc.5":
-  version "2.13.0-rc.5"
-  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-react/-/components-react-2.13.0-rc.5.tgz#768d39ac415c5ef3ebb70aa55545327e4bf21cf5"
-  integrity sha512-k4EFOQMLTLy3CkgnqIUgKlqLZ0Xt3VbzhCjRrVVgR3iJbjkaSaMgreGUxz6hjEwzkK63OEZ9PmqySb+YIiCkDw==
+"@porsche-design-system/components-react@2.14.0-rc.1":
+  version "2.14.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-react/-/components-react-2.14.0-rc.1.tgz#241eb94fa3961102f3ed2e99921081ec3a656ff9"
+  integrity sha512-n4i58V/9NJmOcxFT/tjY47vux2P2+FLAo3KEi0rvH/Frw5FXwaJCR5h+8KRD8Fi+xwPVQ9rcAK5BCBu5uVaxlA==
   dependencies:
-    "@porsche-design-system/components-js" "2.13.0-rc.5"
+    "@porsche-design-system/components-js" "2.14.0-rc.1"
 
 "@porsche-design-system/prettier-config@^1.0.0":
   version "1.0.1"
