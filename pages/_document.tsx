@@ -7,8 +7,9 @@ import {
   getMetaTagsAndIconLinks,
   getComponentChunkLinks,
   getFontLinks,
+  getBrowserSupportFallbackScript,
+  getCookiesFallbackScript
 } from '@porsche-design-system/components-react/partials';
-import { includeOverlay, includeCookieOverlay, includeBanner } from '@porsche-design-system/browser-notification';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
@@ -50,7 +51,8 @@ class MyDocument extends Document {
           <NextScript />
           {/* getLoaderScript partial makes no sense in this context and breaks the app in dev mode */}
           {/* {getLoaderScript({ format: 'jsx' })} */}
-          <div dangerouslySetInnerHTML={{ __html: includeBanner() + includeOverlay() + includeCookieOverlay() }} />
+          {getCookiesFallbackScript({ format: 'jsx' })}
+          {getBrowserSupportFallbackScript({ format: 'jsx' })}
         </body>
       </Html>
     );
