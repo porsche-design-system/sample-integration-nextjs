@@ -1,4 +1,4 @@
-import type { AccordionChangeEvent } from '@porsche-design-system/components-react';
+import type { AccordionChangeEvent, TabChangeEvent } from '@porsche-design-system/components-react';
 import {
   PButton,
   PButtonPure,
@@ -15,6 +15,7 @@ import {
   PAccordion,
   PText,
   useToastManager,
+  PTabsBar,
 } from '@porsche-design-system/components-react';
 import React, { useCallback, useState } from 'react';
 import Header from '../components/header';
@@ -25,6 +26,10 @@ const CollectionPage = (): JSX.Element => {
   const [activePage, setActivePage] = useState(1);
   const [isAccordion1Open, setIsAccordion1Open] = useState<boolean>(false);
   const [isAccordion2Open, setIsAccordion2Open] = useState<boolean>(false);
+  const [tabIndex, setTabIndex] = useState<number>();
+  const onTabChange = useCallback((e: CustomEvent<TabChangeEvent>) => {
+    setTabIndex(e.detail.activeTabIndex);
+  }, []);
   const { addMessage } = useToastManager();
 
   const handleSubmit = (e: React.MouseEvent<{}, MouseEvent>): void => {
@@ -89,6 +94,20 @@ const CollectionPage = (): JSX.Element => {
             Test PLinkPure
           </PLinkPure>
           <PLinkPure href="#propHashTest">Test propHash</PLinkPure>
+        </PGridItem>
+
+        <PGridItem size={12}>
+          <PDivider className="divider" />
+          <PHeadline variant="headline-4">Tabs</PHeadline>
+          <PDivider className="divider" />
+        </PGridItem>
+
+        <PGridItem size={12}>
+          <PTabsBar activeTabIndex={tabIndex} onTabChange={onTabChange}>
+            <button type="button">Tab One</button>
+            <button type="button">Tab Two</button>
+            <button type="button">Tab Three</button>
+          </PTabsBar>
         </PGridItem>
 
         <PGridItem size={12}>
