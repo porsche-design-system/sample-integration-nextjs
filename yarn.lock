@@ -633,10 +633,10 @@
     form-data "^4.0.0"
     opener "^1.5.2"
 
-"@porsche-design-system/components-js@2.11.0", "@porsche-design-system/components-js@2.15.0-rc.1", "@porsche-design-system/components-js@2.16.2-rc.0":
-  version "2.15.0-rc.1"
-  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-2.15.0-rc.1.tgz#2b5da3415af3cdd1c0f475ac40eecebde92d6145"
-  integrity sha512-ab16WHw7A/WLlLwliRJ7LmdCCHfpYGi5rcV0pYUH/vHn61oZB1J9M84zIa17VHo1Rf9GOU2dDf9adhrZBOiUlQ==
+"@porsche-design-system/components-js@2.11.0", "@porsche-design-system/components-js@2.16.2-rc.0":
+  version "2.16.2-rc.0"
+  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-2.16.2-rc.0.tgz#6b11928b72d6ef5eb50ff8fea86b7d10ed7cc5b6"
+  integrity sha512-MpLy1ViKO8KOMdlVBEUXwT5WtfC/3QMz3UJONeGzwxuJRM2VJnpA9PlX4zpw6uAlXV9x5+w3SgJICcdh/Nfdfw==
 
 "@porsche-design-system/components-react@2.16.2-rc.0":
   version "2.16.2-rc.0"
