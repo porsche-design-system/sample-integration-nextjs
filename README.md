@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is project shows the example usage of the Porsche Design System Components in NextJS. See also the [project documentation](https://designsystem.porsche.com/latest/start-coding/next-js/getting-started) and the [deployed project](https://porscheui.github.io/sample-integration-nextjs).
+This is project shows the example usage of the Porsche Design System Components in NextJS. See also the [project documentation](https://designsystem.porsche.com/latest/start-coding/next-js/getting-started) and the [deployed project](https://porsche-design-system.github.io/sample-integration-nextjs).
 
 For further documentation regarding designing websites and the correct usage of the components, you can visit our website https://designsystem.porsche.com/.
 
@@ -29,7 +29,7 @@ For further documentation regarding designing websites and the correct usage of 
 
 ### Getting started
 
-1. Clone [`sample-integration-nextjs` repository](https://github.com/porscheui/sample-integration-nextjs)
+1. Clone [`sample-integration-nextjs` repository](https://github.com/porsche-design-system/sample-integration-nextjs)
 1. Switch to **project root directory**
 1. Execute command `npm login --registry=https://porscheui.jfrog.io/porscheui/api/npm/npm/`
 1. Enter username, password (Artifactory API Key, **not** Artifactory password!) and e-mail address when asked in terminal
