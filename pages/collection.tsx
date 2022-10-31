@@ -15,7 +15,7 @@ import {
   PAccordion,
   PText,
   useToastManager,
-  PTabsBar,
+  PTabsBar, PLinkTile,
 } from '@porsche-design-system/components-react';
 import React, { useCallback, useState } from 'react';
 import Header from '../components/header';
@@ -95,7 +95,13 @@ const CollectionPage = (): JSX.Element => {
           </PLinkPure>
           <PLinkPure href="#propHashTest">Test propHash</PLinkPure>
         </PGridItem>
-
+        <PGridItem size={5}>
+          <PLinkTile href="#" label="Some Label" description="Default">
+            <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyAQMAAAAk8RryAAAABlBMVEUAAAD2vP9xXLiUAAAAAXRSTlMAQObYZgAAABxJREFUGNNjYOBgYGBhYKAZ/R8MDsD4Q5amkz8ASp4PtTYYQZIAAAAASUVORK5CYII=" alt="Some alt text"
+            />
+          </PLinkTile>
+        </PGridItem>
         <PGridItem size={12}>
           <PDivider className="divider" />
           <PHeadline variant="headline-4">Tabs</PHeadline>
