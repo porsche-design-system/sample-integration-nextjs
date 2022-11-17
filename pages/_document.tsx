@@ -8,7 +8,8 @@ import {
   getComponentChunkLinks,
   getFontLinks,
   getBrowserSupportFallbackScript,
-  getCookiesFallbackScript
+  getCookiesFallbackScript,
+  getDSRPonyfill
 } from '@porsche-design-system/components-react/partials';
 
 class MyDocument extends Document {
@@ -51,6 +52,7 @@ class MyDocument extends Document {
           <NextScript />
           {/* getLoaderScript partial makes no sense in this context and breaks the app in dev mode */}
           {/* {getLoaderScript({ format: 'jsx' })} */}
+          {getDSRPonyfill({ format: 'jsx' })}
           {getCookiesFallbackScript({ format: 'jsx' })}
           {getBrowserSupportFallbackScript({ format: 'jsx' })}
         </body>
