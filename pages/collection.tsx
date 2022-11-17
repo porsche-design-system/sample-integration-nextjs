@@ -1,4 +1,4 @@
-import type { AccordionChangeEvent, TabChangeEvent } from '@porsche-design-system/components-react';
+import type { AccordionChangeEvent, TabChangeEvent } from '@porsche-design-system/components-react/ssr';
 import {
   PButton,
   PButtonPure,
@@ -16,7 +16,7 @@ import {
   PText,
   useToastManager,
   PTabsBar, PLinkTile,
-} from '@porsche-design-system/components-react';
+} from '@porsche-design-system/components-react/ssr';
 import React, { useCallback, useState } from 'react';
 import Header from '../components/header';
 import Head from 'next/head';

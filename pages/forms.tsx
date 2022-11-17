@@ -2,7 +2,7 @@ import type {
   SegmentedControlChangeEvent,
   StepChangeEvent,
   StepperState,
-} from '@porsche-design-system/components-react';
+} from '@porsche-design-system/components-react/ssr';
 import {
   PButton,
   PButtonGroup,
@@ -20,7 +20,7 @@ import {
   PText,
   PTextareaWrapper,
   PTextFieldWrapper,
-} from '@porsche-design-system/components-react';
+} from '@porsche-design-system/components-react/ssr';
 import React, { ChangeEvent, FormEvent, useCallback, useState } from 'react';
 import Header from '../components/header';
 import Head from 'next/head';

@@ -84,7 +84,7 @@ We consume the Mocks in the **setupTest.js** file in the root folder.
 ```
 // setupTest.js
 
-jest.mock('@porsche-design-system/components-react', () => {
+jest.mock('@porsche-design-system/components-react/ssr', () => {
     return require('@porsche-design-system/components-react/mocks');
 });
 ```

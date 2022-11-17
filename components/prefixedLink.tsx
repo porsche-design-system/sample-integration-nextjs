@@ -1,4 +1,4 @@
-import { PLinkPure } from '@porsche-design-system/components-react';
+import { PLinkPure } from '@porsche-design-system/components-react/ssr';
 import Link, { LinkProps } from 'next/link';
 import React, { PropsWithChildren } from 'react';
 

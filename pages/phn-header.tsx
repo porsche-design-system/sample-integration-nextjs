@@ -1,4 +1,4 @@
-import { PButton, PIcon, PLinkPure } from '@porsche-design-system/components-react';
+import { PButton, PIcon, PLinkPure } from '@porsche-design-system/components-react/ssr';
 import React, { useEffect } from 'react';
 import Header from '../components/header';
 import Head from 'next/head';

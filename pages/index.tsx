@@ -1,4 +1,4 @@
-import { PText } from '@porsche-design-system/components-react';
+import { PText } from '@porsche-design-system/components-react/ssr';
 import React from 'react';
 import Header from '../components/header';
 
