@@ -2,7 +2,7 @@ import App from 'next/app';
 import React from 'react';
 import '../styles.scss';
 import Head from 'next/head';
-import { PorscheDesignSystemProvider, PToast } from '@porsche-design-system/components-react';
+import { PorscheDesignSystemProvider, PToast } from '@porsche-design-system/components-react/ssr';
 
 export default class StyledApp extends App {
   render() {
