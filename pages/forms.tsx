@@ -30,7 +30,6 @@ type StepperHorizontalItemProps = {
   name: string;
 };
 
-
 const FormsPage = (): JSX.Element => {
   const [select, setSelect] = useState('Change this Headline by selecting');
   const [checkBox, setCheckBox] = useState(false);
@@ -81,7 +80,7 @@ const FormsPage = (): JSX.Element => {
   };
 
   const getActiveStepIndex = (steps: StepperHorizontalItemProps[]): number =>
-      steps.findIndex((step) => step.state === 'current');
+    steps.findIndex((step) => step.state === 'current');
 
   const onNextPrevStep = (direction: 'next' | 'prev'): void => {
     const newState = [...steps];
@@ -109,7 +108,6 @@ const FormsPage = (): JSX.Element => {
     newState[activeStepIndex].state = 'current';
     setSteps(newState);
   };
-
 
   return (
     <div className="pageLayout">
@@ -158,9 +156,9 @@ const FormsPage = (): JSX.Element => {
         <PFlexItem>
           <PStepperHorizontal onStepChange={handleStepChange}>
             {steps.map(({ state, name }) => (
-                <PStepperHorizontalItem key={name} state={state}>
-                  {name}
-                </PStepperHorizontalItem>
+              <PStepperHorizontalItem key={name} state={state}>
+                {name}
+              </PStepperHorizontalItem>
             ))}
           </PStepperHorizontal>
 
@@ -168,18 +166,18 @@ const FormsPage = (): JSX.Element => {
 
           <PButtonGroup>
             <PButton
-                icon="arrow-head-left"
-                variant="tertiary"
-                onClick={() => onNextPrevStep('prev')}
-                disabled={getActiveStepIndex(steps) === 0}
+              icon="arrow-head-left"
+              variant="tertiary"
+              onClick={() => onNextPrevStep('prev')}
+              disabled={getActiveStepIndex(steps) === 0}
             >
               Previous Step
             </PButton>
 
             <PButton
-                variant="primary"
-                disabled={getActiveStepIndex(steps) === steps.length - 1}
-                onClick={() => onNextPrevStep('next')}
+              variant="primary"
+              disabled={getActiveStepIndex(steps) === steps.length - 1}
+              onClick={() => onNextPrevStep('next')}
             >
               Next Step
             </PButton>

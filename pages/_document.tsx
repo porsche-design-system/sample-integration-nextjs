@@ -9,7 +9,7 @@ import {
   getFontLinks,
   getBrowserSupportFallbackScript,
   getCookiesFallbackScript,
-  getDSRPonyfill
+  getDSRPonyfill,
 } from '@porsche-design-system/components-react/partials';
 
 class MyDocument extends Document {
@@ -25,7 +25,7 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <link rel="icon" href="/favicon.ico" key="favicon" />
           {/* **necessary for SSR support**, injects stylesheet which defines visibility of pre-hydrated PDS components */}
-          {getInitialStyles({ format: 'jsx'})}
+          {getInitialStyles({ format: 'jsx' })}
           {/* injects stylesheet which defines Porsche Next CSS font-face definition (=> minimize FOUT) */}
           {getFontFaceStylesheet({ format: 'jsx' })}
           {/* preloads Porsche Next font (=> minimize FOUT) */}
