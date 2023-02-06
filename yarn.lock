@@ -653,22 +653,22 @@
     form-data "^4.0.0"
     opener "^1.5.2"
 
-"@porsche-design-system/components-js@2.19.0-rc.2":
-  version "2.19.0-rc.2"
-  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-2.19.0-rc.2.tgz#6e70a2546fed1cdfe4ea682aeb992e921da60cb7"
-  integrity sha512-Ek4lZyJVvx0DMAJYGWqffmJd2zFI+AtfJde5oOMoXpXrL5R+sfQA3I4X0U5ck9DxfC8M+svPT/pkgK2kRKZf0g==
+"@porsche-design-system/components-js@2.20.0-rc.0":
+  version "2.20.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-2.20.0-rc.0.tgz#df625e3bc09f3bb36b1ffa5592c4472041ca393f"
+  integrity sha512-gPcvDjsO26Zya8HdGjDk4YN20iE8ZX7AwvKDmaW4ys+z+Qu9CWWUDFQCHG14/FvnTqYu4ygLOPJELBJfwgM30A==
 
 "@porsche-design-system/components-js@^2.17.0":
   version "2.18.0"
   resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-2.18.0.tgz#498fe25950174014156deab7d54569d6253049b2"
   integrity sha512-GXjApbCKzJM2HLaDvVo5S01LPF/sBXJPi6mFs4w190Het33fLNf7kzw9NZpxBVPFKmp8pCgNfjSjWT9hoZ+Myw==
 
-"@porsche-design-system/components-react@2.19.0-rc.2":
-  version "2.19.0-rc.2"
-  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-react/-/components-react-2.19.0-rc.2.tgz#e927132827a7f6b7250bf01539fe13398132d267"
-  integrity sha512-jdcJTTobCNaEDf6LXjY6TQpwkvGx8WGMZlAFsmcvdiz0ZJWy/1KEFIS5PtYo7KOJNBHopJnP7+cSnNZu4mXryg==
+"@porsche-design-system/components-react@2.20.0-rc.0":
+  version "2.20.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-react/-/components-react-2.20.0-rc.0.tgz#8a53b1d9ae36fd607f5133247b70569742850d05"
+  integrity sha512-lTA4+wNaPzYCgrKTCKMD6LJ2YHYsFnYHfd6nxmxjARw6BXweaddb0x8TE5Iuym19OAFSsYHVAMffsTaDSExVzg==
   dependencies:
-    "@porsche-design-system/components-js" "2.19.0-rc.2"
+    "@porsche-design-system/components-js" "2.20.0-rc.0"
 
 "@porsche-design-system/prettier-config@^1.0.0":
   version "1.0.1"
