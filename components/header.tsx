@@ -13,6 +13,7 @@ const Header = (): JSX.Element => (
     <PrefixedLink href="/forms">Forms</PrefixedLink>
     <PrefixedLink href="/utilities">Utilities</PrefixedLink>
     <PrefixedLink href="/phn-header">Phn Header</PrefixedLink>
+    <PrefixedLink href="/layout-shift">Layout Shift</PrefixedLink>
 
     <PDivider className="divider" />
   </>
