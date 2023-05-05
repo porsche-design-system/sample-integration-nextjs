@@ -32,12 +32,12 @@ setup() {
   echo "task: [$(date)] \"setup\""
   git config --global user.name "${GITHUB_ACTOR}"
   git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+  git config --global --add safe.directory /github/workspace
   git remote set-url origin "git@github.com:${GITHUB_REPOSITORY}.git"
 }
 
 checkout_gh_pages() {
   echo "task: [$(date)] \"checkout_gh_pages\""
-  git config --global --add safe.directory /github/workspace
   git clone --single-branch -b gh-pages "git@github.com:${GITHUB_REPOSITORY}.git" "/opt/sample-integration-gh-pages"
 }
 
