@@ -1,4 +1,4 @@
-import type { AccordionChangeEvent, TabChangeEvent } from '@porsche-design-system/components-react/ssr';
+import type { AccordionUpdateEvent, TabsBarUpdateEvent } from '@porsche-design-system/components-react/ssr';
 import {
   PButton,
   PButtonPure,
@@ -15,7 +15,8 @@ import {
   PAccordion,
   PText,
   useToastManager,
-  PTabsBar, PLinkTile,
+  PTabsBar,
+  PLinkTile,
 } from '@porsche-design-system/components-react/ssr';
 import React, { useCallback, useState } from 'react';
 import Header from '../components/header';
@@ -27,7 +28,7 @@ const CollectionPage = (): JSX.Element => {
   const [isAccordion1Open, setIsAccordion1Open] = useState<boolean>(false);
   const [isAccordion2Open, setIsAccordion2Open] = useState<boolean>(false);
   const [tabIndex, setTabIndex] = useState<number>();
-  const onTabChange = useCallback((e: CustomEvent<TabChangeEvent>) => {
+  const onTabsBarUpdate = useCallback((e: CustomEvent<TabsBarUpdateEvent>) => {
     setTabIndex(e.detail.activeTabIndex);
   }, []);
   const { addMessage } = useToastManager();
@@ -47,11 +48,11 @@ const CollectionPage = (): JSX.Element => {
     setActivePage(event.detail.page);
   };
 
-  const onAccordion1Change = useCallback((e: CustomEvent<AccordionChangeEvent>) => {
+  const onAccordion1Update = useCallback((e: CustomEvent<AccordionUpdateEvent>) => {
     setIsAccordion1Open(e.detail.open);
   }, []);
 
-  const onAccordion2Change = useCallback((e: CustomEvent<AccordionChangeEvent>) => {
+  const onAccordion2Update = useCallback((e: CustomEvent<AccordionUpdateEvent>) => {
     setIsAccordion2Open(e.detail.open);
   }, []);
 
@@ -98,7 +99,8 @@ const CollectionPage = (): JSX.Element => {
         <PGridItem size={5}>
           <PLinkTile href="#" label="Some Label" description="Default">
             <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyAQMAAAAk8RryAAAABlBMVEUAAAD2vP9xXLiUAAAAAXRSTlMAQObYZgAAABxJREFUGNNjYOBgYGBhYKAZ/R8MDsD4Q5amkz8ASp4PtTYYQZIAAAAASUVORK5CYII=" alt="Some alt text"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyAQMAAAAk8RryAAAABlBMVEUAAAD2vP9xXLiUAAAAAXRSTlMAQObYZgAAABxJREFUGNNjYOBgYGBhYKAZ/R8MDsD4Q5amkz8ASp4PtTYYQZIAAAAASUVORK5CYII="
+              alt="Some alt text"
             />
           </PLinkTile>
         </PGridItem>
@@ -109,7 +111,7 @@ const CollectionPage = (): JSX.Element => {
         </PGridItem>
 
         <PGridItem size={12}>
-          <PTabsBar activeTabIndex={tabIndex} onTabChange={onTabChange}>
+          <PTabsBar activeTabIndex={tabIndex} onUpdate={onTabsBarUpdate}>
             <button type="button">Tab One</button>
             <button type="button">Tab Two</button>
             <button type="button">Tab Three</button>
@@ -133,11 +135,11 @@ const CollectionPage = (): JSX.Element => {
           <PDivider className="divider" />
 
           <div className="accordion-wrapper">
-            <PAccordion heading="Some Heading" tag="h3" open={isAccordion1Open} onAccordionChange={onAccordion1Change}>
+            <PAccordion heading="Some Heading" tag="h3" open={isAccordion1Open} onUpdate={onAccordion1Update}>
               <PText>{content}</PText>
               <PText>{content}</PText>
             </PAccordion>
-            <PAccordion heading="Some Heading" tag="h3" open={isAccordion2Open} onAccordionChange={onAccordion2Change}>
+            <PAccordion heading="Some Heading" tag="h3" open={isAccordion2Open} onUpdate={onAccordion2Update}>
               <PText>{content}</PText>
               <PText>{content}</PText>
             </PAccordion>

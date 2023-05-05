@@ -31,7 +31,7 @@ class MyDocument extends Document {
           {/* preloads Porsche Next font (=> minimize FOUT) */}
           {getFontLinks({ format: 'jsx' })}
           {/* preloads PDS component core chunk from CDN for PDS component hydration (=> improve loading performance) */}
-          {getComponentChunkLinks({ format: 'jsx' })}
+          {getComponentChunkLinks({ components: ['tabs-bar', 'scroller', 'icon'], format: 'jsx' })}
           {/* preloads Porsche icons (=> minimize FOUC) */}
           {getIconLinks({ format: 'jsx' })}
           {/* injects favicon, apple touch icons, android touch icons, etc. */}

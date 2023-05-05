@@ -1,7 +1,7 @@
 import type {
-  SegmentedControlChangeEvent,
-  StepChangeEvent,
-  StepperState,
+  SegmentedControlUpdateEvent,
+  StepperHorizontalUpdateEvent,
+  StepperHorizontalItemState,
 } from '@porsche-design-system/components-react/ssr';
 import {
   PButton,
@@ -26,7 +26,7 @@ import Header from '../components/header';
 import Head from 'next/head';
 
 type StepperHorizontalItemProps = {
-  state?: StepperState;
+  state?: StepperHorizontalItemState;
   name: string;
 };
 
@@ -55,7 +55,7 @@ const FormsPage = (): JSX.Element => {
     'A form with a password input field could be displayed here.',
   ];
 
-  const onSegmentedControlChange = useCallback((e: CustomEvent<SegmentedControlChangeEvent>) => {
+  const onSegmentedControlUpdate = useCallback((e: CustomEvent<SegmentedControlUpdateEvent>) => {
     setCurrentValue(e.detail.value as number);
   }, []);
 
@@ -97,7 +97,7 @@ const FormsPage = (): JSX.Element => {
     setSteps(newState);
   };
 
-  const handleStepChange = (e: CustomEvent<StepChangeEvent>): void => {
+  const onStepperHorizontalChange = (e: CustomEvent<StepperHorizontalUpdateEvent>): void => {
     const { activeStepIndex } = e.detail;
 
     const newState = [...steps];
@@ -139,7 +139,7 @@ const FormsPage = (): JSX.Element => {
           <PSegmentedControl
             style={{ marginTop: '1rem' }}
             value={currentValue}
-            onSegmentedControlChange={onSegmentedControlChange}
+            onUpdate={onSegmentedControlUpdate}
             aria-label="Choose an Option"
           >
             <PSegmentedControlItem value={1}>Option 1</PSegmentedControlItem>
@@ -154,7 +154,7 @@ const FormsPage = (): JSX.Element => {
           <PDivider className="divider" />
         </PFlexItem>
         <PFlexItem>
-          <PStepperHorizontal onStepChange={handleStepChange}>
+          <PStepperHorizontal onUpdate={onStepperHorizontalChange}>
             {steps.map(({ state, name }) => (
               <PStepperHorizontalItem key={name} state={state}>
                 {name}
