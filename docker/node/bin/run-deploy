@@ -37,6 +37,7 @@ setup() {
 
 checkout_gh_pages() {
   echo "task: [$(date)] \"checkout_gh_pages\""
+  git config --global --add safe.directory /github/workspace
   git clone --single-branch -b gh-pages "git@github.com:${GITHUB_REPOSITORY}.git" "/opt/sample-integration-gh-pages"
 }
 
