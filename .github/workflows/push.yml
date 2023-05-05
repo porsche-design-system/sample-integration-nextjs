@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: 'Install'
         uses: ./docker/node/
         env:
@@ -40,7 +40,7 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: 'Restore build artifact'
         uses: actions/download-artifact@v1
         with:
