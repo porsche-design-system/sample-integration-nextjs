@@ -16,7 +16,7 @@
   "dependencies": {
     "@porsche-design-system/components-react": "3.1.0-rc.0",
     "@porsche-design-system/utilities": "5.4.1",
-    "@porschehn/navigation": "3.0.5",
+    "@porschehn/navigation": "2.23.2",
     "next": "12.3.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"
