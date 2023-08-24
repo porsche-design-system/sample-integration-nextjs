@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, render, waitFor } from '@testing-library/react';
 import Collection from '../pages/collection';
 import Forms from '../pages/forms';
 
@@ -40,7 +40,7 @@ test('headline should be displayed after click on Checkbox', async () => {
   const input = getByTestId('checkbox');
 
   input.click();
-  expect(getByText('Checkbox Works')).toBeInTheDocument();
+  waitFor(() => expect(getByText('Checkbox Works')).toBeInTheDocument());
 });
 
 test('headline should be displayed after click on RadioButton', async () => {
@@ -48,7 +48,7 @@ test('headline should be displayed after click on RadioButton', async () => {
   const input = getByTestId('radiobutton');
 
   input.click();
-  expect(getByText('Radio Works')).toBeInTheDocument();
+  waitFor(() => expect(getByText('Radio Works')).toBeInTheDocument());
 });
 
 test('headline should be changed according the typed value', async () => {
