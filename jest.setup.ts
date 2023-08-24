@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 import { skipCheckForPorscheDesignSystemProviderDuringTests } from '@porsche-design-system/components-react/ssr';
 
 skipCheckForPorscheDesignSystemProviderDuringTests();

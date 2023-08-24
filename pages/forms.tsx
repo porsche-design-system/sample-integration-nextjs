@@ -10,7 +10,7 @@ import {
   PDivider,
   PFlex,
   PFlexItem,
-  PHeadline,
+  PHeading,
   PRadioButtonWrapper,
   PSegmentedControl,
   PSegmentedControlItem,
@@ -31,11 +31,11 @@ type StepperHorizontalItemProps = {
 };
 
 const FormsPage = (): JSX.Element => {
-  const [select, setSelect] = useState('Change this Headline by selecting');
-  const [checkBox, setCheckBox] = useState(false);
-  const [radioButton, setRadioButton] = useState(false);
-  const [textField, setTextField] = useState('Change this Headline by typing');
-  const [currentValue, setCurrentValue] = useState(1);
+  const [selectValue, setSelectValue] = useState('Change this Headline by selecting');
+  const [isCheckboxActive, setIsCheckboxActive] = useState(false);
+  const [isRadioButtonActive, setIsRadioButtonActive] = useState(false);
+  const [textFieldValue, setTextFieldValue] = useState('Change this Headline by typing');
+  const [segmentedControlValue, setSegmentedControlValue] = useState(1);
   const [steps, setSteps] = useState<StepperHorizontalItemProps[]>([
     {
       state: 'current',
@@ -56,28 +56,24 @@ const FormsPage = (): JSX.Element => {
   ];
 
   const onSegmentedControlUpdate = useCallback((e: CustomEvent<SegmentedControlUpdateEvent>) => {
-    setCurrentValue(e.detail.value as number);
+    setSegmentedControlValue(e.detail.value as number);
   }, []);
 
-  const handleSelect = (e: ChangeEvent<HTMLSelectElement>): void => {
-    setSelect(e.target.value);
-  };
+  const onSelectChange = useCallback((e: ChangeEvent<HTMLSelectElement>): void => {
+    setSelectValue(e.target.value);
+  }, []);
 
-  const handleCheckBox = (e: FormEvent<HTMLInputElement>): void => {
-    if (checkBox) {
-      setCheckBox(false);
-    } else {
-      setCheckBox(true);
-    }
-  };
+  const onCheckboxInput = useCallback((e: FormEvent<HTMLInputElement>): void => {
+    setIsCheckboxActive((prev) => !prev);
+  }, []);
 
-  const handleRadioButton = (e: FormEvent<HTMLInputElement>): void => {
-    setRadioButton(true);
-  };
+  const onRadioButtonInput = useCallback((e: FormEvent<HTMLInputElement>): void => {
+    setIsRadioButtonActive(true);
+  }, []);
 
-  const handleTextField = (e: ChangeEvent<HTMLInputElement>): void => {
-    setTextField(e.target.value);
-  };
+  const onTextFieldChange = useCallback((e: ChangeEvent<HTMLInputElement>): void => {
+    setTextFieldValue(e.target.value);
+  }, []);
 
   const getActiveStepIndex = (steps: StepperHorizontalItemProps[]): number =>
     steps.findIndex((step) => step.state === 'current');
@@ -117,17 +113,17 @@ const FormsPage = (): JSX.Element => {
       <Header />
       <PFlex direction="column">
         <PFlexItem>
-          <PHeadline variant="headline-3">Form examples</PHeadline>
+          <PHeading size="medium">Form examples</PHeading>
         </PFlexItem>
         <PFlexItem>
           <PDivider className="divider" />
         </PFlexItem>
         <PFlexItem>
           {/*To illustrate the mock procedure during the tests the selected value is displayed in the headline */}
-          <PHeadline variant="headline-4">{select}</PHeadline>
+          <PHeading size="medium">{selectValue}</PHeading>
           <form>
             <PSelectWrapper>
-              <select data-testid="select" value={select} onChange={handleSelect}>
+              <select data-testid="select" value={selectValue} onChange={onSelectChange}>
                 <option value="Headline A">A</option>
                 <option value="Headline B">B</option>
                 <option value="Headline C">C</option>
@@ -138,7 +134,7 @@ const FormsPage = (): JSX.Element => {
         <PFlexItem>
           <PSegmentedControl
             style={{ marginTop: '1rem' }}
-            value={currentValue}
+            value={segmentedControlValue}
             onUpdate={onSegmentedControlUpdate}
             aria-label="Choose an Option"
           >
@@ -148,7 +144,7 @@ const FormsPage = (): JSX.Element => {
             <PSegmentedControlItem value={4}>Option 4</PSegmentedControlItem>
             <PSegmentedControlItem value={5}>Option 5</PSegmentedControlItem>
           </PSegmentedControl>
-          <PText>Current value of segmented-control: {currentValue}</PText>
+          <PText>Current value of segmented-control: {segmentedControlValue}</PText>
         </PFlexItem>
         <PFlexItem>
           <PDivider className="divider" />
@@ -188,16 +184,16 @@ const FormsPage = (): JSX.Element => {
         </PFlexItem>
         <PFlexItem>
           {/*Checking the Checkbox makes the headline appear*/}
-          {checkBox ? <PHeadline variant="headline-4">Checkbox Works</PHeadline> : ''}
+          {isCheckboxActive && <PHeading size="medium">Checkbox Works</PHeading>}
           <PCheckboxWrapper label="Some label" hideLabel={false}>
-            <input data-testid="checkbox" type="checkbox" name="TestBox" onInput={handleCheckBox} />
+            <input data-testid="checkbox" type="checkbox" name="TestBox" onInput={onCheckboxInput} />
           </PCheckboxWrapper>
         </PFlexItem>
         <PFlexItem className="contentWrapperSmall">
           {/* Clicking the Radiobutton makes the headline appear*/}
-          {radioButton ? <PHeadline variant="headline-4">Radio Works</PHeadline> : ''}
+          {isRadioButtonActive && <PHeading size="medium">Radio Works</PHeading>}
           <PRadioButtonWrapper label="Some label" hideLabel={false}>
-            <input data-testid="radiobutton" type="radio" name="RadioButton" onInput={handleRadioButton} />
+            <input data-testid="radiobutton" type="radio" name="RadioButton" onInput={onRadioButtonInput} />
           </PRadioButtonWrapper>
         </PFlexItem>
         <PFlexItem>
@@ -212,9 +208,9 @@ const FormsPage = (): JSX.Element => {
         </PFlexItem>
         <PFlexItem className="contentWrapperSmall">
           {/*The headline changes according to the text field input*/}
-          <PHeadline variant="headline-4">{textField}</PHeadline>
+          <PHeading size="medium">{textFieldValue}</PHeading>
           <PTextFieldWrapper label="Test TextField" hideLabel={false}>
-            <input data-testid="input" type="text" name="Textfield" onChange={handleTextField} />
+            <input data-testid="input" type="text" name="Textfield" onChange={onTextFieldChange} />
           </PTextFieldWrapper>
         </PFlexItem>
         <PFlexItem className="contentWrapperSmall">
@@ -235,7 +231,7 @@ const FormsPage = (): JSX.Element => {
                     type="text"
                     aria-invalid={true}
                     name="some-name"
-                    onChange={handleTextField}
+                    onChange={onTextFieldChange}
                   />
                 </PTextFieldWrapper>
               </PFlexItem>

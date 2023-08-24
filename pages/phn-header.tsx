@@ -2,12 +2,12 @@ import { PButton, PIcon, PLinkPure } from '@porsche-design-system/components-rea
 import React, { useEffect } from 'react';
 import Header from '../components/header';
 import Head from 'next/head';
-import { applyPolyfills, defineCustomElements } from '@porschehn/navigation/loader';
+import { defineCustomElements } from '@porschehn/navigation/loader';
 
 const PhnHeaderPage = (): JSX.Element => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      applyPolyfills().then(() => defineCustomElements(window));
+      defineCustomElements(window);
     }
   }, []);
 
