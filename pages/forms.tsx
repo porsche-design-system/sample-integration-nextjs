@@ -11,6 +11,9 @@ import {
   PFlex,
   PFlexItem,
   PHeading,
+  PMultiSelect,
+  PMultiSelectOption,
+  PPinCode,
   PRadioButtonWrapper,
   PSegmentedControl,
   PSegmentedControlItem,
@@ -237,6 +240,20 @@ const FormsPage = (): JSX.Element => {
               </PFlexItem>
             </PFlex>
           </form>
+        </PFlexItem>
+        <PFlexItem className="contentWrapperSmall">
+          <PPinCode label="Default" />
+          <PPinCode label="Type password" type="password" />
+        </PFlexItem>
+        <PFlexItem className="contentWrapperSmall">
+          <PMultiSelect name="name" label="Some Label" description="Some description" theme="light" required>
+            <PMultiSelectOption value="a">Option A</PMultiSelectOption>
+            <PMultiSelectOption value="b">Option B</PMultiSelectOption>
+            <PMultiSelectOption value="c">Option C</PMultiSelectOption>
+            <PMultiSelectOption value="d">Option D</PMultiSelectOption>
+            <PMultiSelectOption value="e">Option E</PMultiSelectOption>
+            <PMultiSelectOption value="f">Option F</PMultiSelectOption>
+          </PMultiSelect>
         </PFlexItem>
       </PFlex>
     </div>
