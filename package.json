@@ -14,9 +14,9 @@
     "clean:build": "rm -rf ./out && rm -rf ./.next"
   },
   "dependencies": {
-    "@porsche-design-system/components-react": "3.7.0-rc.1",
+    "@porsche-design-system/components-react": "3.7.0-rc.2",
     "@porsche-design-system/utilities": "5.4.1",
-    "@porschehn/navigation": "3.2.4",
+    "@porschehn/navigation": "3.2.5",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -28,13 +28,13 @@
     "@types/node": "^20.6.3",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
-    "core-js": "^3.32.2",
+    "core-js": "^3.33.0",
     "ignore-loader": "^0.1.2",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "prettier": "^3.0.3",
     "regenerator-runtime": "0.14.0",
-    "sass": "^1.67.0",
+    "sass": "^1.68.0",
     "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
   }
