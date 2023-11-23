@@ -2,6 +2,7 @@ import type { AccordionUpdateEvent, TabsBarUpdateEvent } from '@porsche-design-s
 import {
   PButton,
   PButtonPure,
+  PButtonGroup,
   PDivider,
   PGrid,
   PGridItem,
@@ -9,6 +10,7 @@ import {
   PIcon,
   PLink,
   PLinkPure,
+  PModal,
   PPagination,
   PPopover,
   PSpinner,
@@ -59,6 +61,15 @@ const CollectionPage = (): JSX.Element => {
   const content =
     'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et ' +
     'dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.';
+
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const onOpen = useCallback(() => {
+    setIsModalOpen(true);
+  }, []);
+  const onDismiss = useCallback(() => {
+    setIsModalOpen(false);
+  }, []);
+
 
   return (
     <div className="pageLayout">
@@ -144,6 +155,23 @@ const CollectionPage = (): JSX.Element => {
               <PText>{content}</PText>
             </PAccordion>
           </div>
+        </PGridItem>
+
+        <PGridItem size={12}>
+          <PButton type="button" aria={{ 'aria-haspopup': 'dialog' }} onClick={onOpen}>
+            Open Modal
+          </PButton>
+          {isModalOpen && (
+              <PModal heading="Some Heading" open={isModalOpen} onDismiss={onDismiss}>
+                <PText>Some Content</PText>
+                <PButtonGroup className="footer">
+                  <PButton>Save</PButton>
+                  <PButton type="button" variant="secondary" icon="close" onClick={onDismiss}>
+                    Close
+                  </PButton>
+                </PButtonGroup>
+              </PModal>
+          )}
         </PGridItem>
 
         <PGridItem size={12}>
