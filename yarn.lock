@@ -616,22 +616,22 @@
     form-data "^4.0.0"
     opener "^1.5.2"
 
-"@porsche-design-system/components-js@3.11.0-rc.0":
-  version "3.11.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-3.11.0-rc.0.tgz#593a8a9b00a85c1d2185f942a157216e42255d38"
-  integrity sha512-x71Q5nfFdCSNe21wV1ujsVXpfaqE685XZMeuDgrWibL1ze/W94xYYqKxV0dQnOi42kZLm1K2m9y12u9j2xZ7Xg==
+"@porsche-design-system/components-js@3.13.0-rc.2":
+  version "3.13.0-rc.2"
+  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-3.13.0-rc.2.tgz#46918c71b9e95732703db2991d98b0fc0cf0eb48"
+  integrity sha512-OhuBvM55QoFvMDPmqXYUd3vHo6L5q65oLCfkIEcdB8ZM7j1T0Oc+HBPieVr/jU90xrTfIH+fq64c5jqbgjI8bA==
 
 "@porsche-design-system/components-js@3.8.0":
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-3.8.0.tgz#6ec9b53a032adf72f376da0f5cad2af371eac36b"
   integrity sha512-THbucP2s+LuXvuv4FJtFwH5lM1WUBgzH3gKyMQ9Z0oykvOP156DPWhzO75jnPEsu22BTJVC6nlTCIvspKg6Eyw==
 
-"@porsche-design-system/components-react@3.11.0-rc.0":
-  version "3.11.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-react/-/components-react-3.11.0-rc.0.tgz#bb8ea7bd9240b89482d3cd62ac32a92709c0d611"
-  integrity sha512-4ksVCVVTmjmzmaYnwpgR3YpWd1ccRvVjKsYkXEBpKFsCf0WvWjogTwi2L7oGdVNopK9Eq3fadnlzrAWLXTQAmg==
+"@porsche-design-system/components-react@3.13.0-rc.2":
+  version "3.13.0-rc.2"
+  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-react/-/components-react-3.13.0-rc.2.tgz#12597ec535956b0a8760a5d7845fd2b8fa4c3610"
+  integrity sha512-C0duqum4isL9OSy86zdFlpLg2VKQndpUf7YTFkCz0AaossoApXBA5Y3zK/VcdmDgbjktezEdtsmgm7q2AJQecA==
   dependencies:
-    "@porsche-design-system/components-js" "3.11.0-rc.0"
+    "@porsche-design-system/components-js" "3.13.0-rc.2"
 
 "@porsche-design-system/prettier-config@^1.0.0":
   version "1.0.1"
@@ -843,8 +843,6 @@
   version "20.11.10"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.11.10.tgz#6c3de8974d65c362f82ee29db6b5adf4205462f9"
   integrity sha512-rZEfe/hJSGYmdfX9tvcPMYeYPW2sNl50nsw4jZmRcaG0HIAb0WYEpsB05GOb53vjqpyE9GUhlDQ4jLSoB5q9kg==
-  dependencies:
-    undici-types "~5.26.4"
 
 "@types/prop-types@*":
   version "15.7.11"
