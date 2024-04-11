@@ -5,7 +5,7 @@
   "prettier": "@porsche-design-system/prettier-config",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && touch out/.nojekyll",
+    "build": "next build && touch out/.nojekyll",
     "start": "next start",
     "test": "jest",
     "prettier": "prettier --write '**/*.{ts,tsx}'",
