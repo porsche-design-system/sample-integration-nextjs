@@ -616,20 +616,22 @@
     form-data "^4.0.0"
     opener "^1.5.2"
 
-"@porsche-design-system/components-js@3.14.0-rc.0":
-  version "3.14.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-3.14.0-rc.0.tgz#5d9943b7d8bccdf070e37724fbe28ef600c402a2"
-  integrity sha512-zpDCqG4ZQ0ZNXXjt3rBMhSUaAUcvI9AaJr5Mn0LS2Hwp/wFeGDcDq77nvJuRYSjfDzpMynnbI58dV9UD0mxtRQ==
+"@porsche-design-system/components-js@3.15.0-rc.5":
+  version "3.15.0-rc.5"
+  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-3.15.0-rc.5.tgz#b4d0eaacaa5fb5dcaf3884a2d2b37bee267f9825"
+  integrity sha512-j3KePXC4ofJNgcFa414g/PPTBLGwuQ4rSgyLheh7QoruM9FVW1SiVlYB50CLiW824YD2fOFkjbERJszxS1AFnQ==
 
 "@porsche-design-system/components-js@3.8.0":
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-3.8.0.tgz#6ec9b53a032adf72f376da0f5cad2af371eac36b"
   integrity sha512-THbucP2s+LuXvuv4FJtFwH5lM1WUBgzH3gKyMQ9Z0oykvOP156DPWhzO75jnPEsu22BTJVC6nlTCIvspKg6Eyw==
 
-"@porsche-design-system/components-react@3.14.0-rc.0":
-  version "3.14.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-react/-/components-react-3.14.0-rc.0.tgz#c40ace05c6df8c1839d2d73270f0556f4a26b87f"
-  integrity sha512-AHUBhPTpsrnz9Uq5hLpw1rhY+I2zq9J2jmGFQq4SsfcAVgun4S+GqFjgEMnjeaWKDumlQwfg3TdCPQSJArD8Zg==
+"@porsche-design-system/components-react@3.15.0-rc.5":
+  version "3.15.0-rc.5"
+  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-react/-/components-react-3.15.0-rc.5.tgz#965ecf83a404fabfd403ebb8ad62b4837e521e44"
+  integrity sha512-O4eMvU75x2fA4H2FJ0Bc5ERc5h4i/hp8nNyjv6XCjzTltzK/+X1ryAU520SWdrli2K8RAVPtJ9rY2ElJaHmGEA==
+  dependencies:
+    "@porsche-design-system/components-js" "3.15.0-rc.5"
 
 "@porsche-design-system/prettier-config@^1.0.0":
   version "1.0.1"
@@ -841,6 +843,8 @@
   version "20.11.10"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.11.10.tgz#6c3de8974d65c362f82ee29db6b5adf4205462f9"
   integrity sha512-rZEfe/hJSGYmdfX9tvcPMYeYPW2sNl50nsw4jZmRcaG0HIAb0WYEpsB05GOb53vjqpyE9GUhlDQ4jLSoB5q9kg==
+  dependencies:
+    undici-types "~5.26.4"
 
 "@types/prop-types@*":
   version "15.7.11"
