@@ -18,7 +18,6 @@ export const Partials = () => {
           {getInitialStyles({ format: 'jsx' })}
           {/* injects stylesheet which defines Porsche Next CSS font-face definition (=> minimize FOUT) */}
           {getFontFaceStyles({ format: 'jsx' })}
-          {/*{getMetaTagsAndIconLinks({ appTitle: 'next JS', format: 'jsx' })}*/}
         </>
       );
     }
