@@ -2,6 +2,7 @@ const BASE_PATH = process.env.CI ? '/sample-integration-nextjs' : '';
 
 /** @type {import('next').NextConfig} */
 module.exports = {
+  output: 'export',
   assetPrefix: BASE_PATH,
   env: {
     BASE_PATH,

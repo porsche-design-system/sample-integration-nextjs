@@ -1,7 +1,7 @@
 import React from 'react';
 import { fireEvent, render, waitFor } from '@testing-library/react';
-import Collection from '../pages/collection';
-import Forms from '../pages/forms';
+import Collection from '../app/collection/page';
+import Forms from '../app/forms/page';
 
 jest.mock('next/link', () => 'a'); // Next JS Bug -> https://github.com/vercel/next.js/issues/15543
 
