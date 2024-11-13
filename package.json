@@ -4,7 +4,7 @@
   "private": true,
   "prettier": "@porsche-design-system/prettier-config",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build && touch out/.nojekyll",
     "start": "next start",
     "test": "jest",
@@ -14,12 +14,12 @@
     "clean:build": "rm -rf ./out && rm -rf ./.next"
   },
   "dependencies": {
-    "@porsche-design-system/components-react": "3.20.0-rc.1",
+    "@porsche-design-system/components-react": "3.21.0-rc.0",
     "@porsche-design-system/utilities": "5.4.1",
     "@porschehn/navigation": "3.3.0",
-    "next": "14.2.5",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "next": "15.0.3",
+    "react": "19.0.0-rc-fb9a90fa48-20240614",
+    "react-dom": "19.0.0-rc-fb9a90fa48-20240614"
   },
   "devDependencies": {
     "@porsche-design-system/prettier-config": "^1.0.0",
