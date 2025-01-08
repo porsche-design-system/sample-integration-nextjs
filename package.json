@@ -14,7 +14,7 @@
     "clean:build": "rm -rf ./out && rm -rf ./.next"
   },
   "dependencies": {
-    "@porsche-design-system/components-react": "3.24.0-rc.0",
+    "@porsche-design-system/components-react": "3.24.0",
     "@porsche-design-system/utilities": "5.4.1",
     "next": "15.1.4",
     "react": "19.0.0",
