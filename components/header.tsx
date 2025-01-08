@@ -2,7 +2,7 @@ import { PDivider, PHeadline } from '@porsche-design-system/components-react/ssr
 import React from 'react';
 import { PrefixedLink } from './prefixedLink';
 
-export const Header = (): JSX.Element => (
+export const Header = () => (
   <>
     <PHeadline variant="headline-2" align="center">
       Example usage of the Porsche-Design-System NextJS
