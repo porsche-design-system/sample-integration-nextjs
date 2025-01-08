@@ -14,6 +14,7 @@ export const Header = (): JSX.Element => (
     <PrefixedLink href="/utilities">Utilities</PrefixedLink>
     <PrefixedLink href="/phn-header">Phn Header</PrefixedLink>
     <PrefixedLink href="/layout-shift">Layout Shift</PrefixedLink>
+    <PrefixedLink href="/styles">Styles</PrefixedLink>
 
     <PDivider className="divider" />
   </>

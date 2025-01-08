@@ -1,7 +1,13 @@
+const {
+  createVanillaExtractPlugin
+} = require('@vanilla-extract/next-plugin');
+
+const withVanillaExtract = createVanillaExtractPlugin();
+
 const BASE_PATH = process.env.CI ? '/sample-integration-nextjs' : '';
 
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   output: 'export',
   assetPrefix: BASE_PATH,
   env: {
@@ -15,3 +21,5 @@ module.exports = {
     return config;
   },
 };
+
+module.exports = withVanillaExtract(nextConfig);
