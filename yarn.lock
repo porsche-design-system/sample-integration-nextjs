@@ -1070,29 +1070,22 @@
     "@parcel/watcher-win32-ia32" "2.5.0"
     "@parcel/watcher-win32-x64" "2.5.0"
 
-"@porsche-design-system/components-js@3.24.0":
-  version "3.24.0"
-  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-3.24.0.tgz#ae2afa0157b2942eb3f76cea240efb3e3c65cc45"
-  integrity sha512-eGzVRnbhZypkxLP9fBIS9nVnz4P9DRfUIEO90wLQ3j8lipXICrkJ+N8KI8vdEAzuY+PYXK0kEcyjwFLNq7BAcA==
+"@porsche-design-system/components-js@3.25.0-rc.1":
+  version "3.25.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-3.25.0-rc.1.tgz#b1c163041d3c26c70c00ae8ee91d50e57501ad7d"
+  integrity sha512-HAWKuq+JoMUpuIaqJHB7VAkurn6a1S8j1HxyMN+RVv/P+dHbVIRXueWWp6s7QXTEv8qWwn4ck0oUjre+F1iRQQ==
 
-"@porsche-design-system/components-react@3.24.0":
-  version "3.24.0"
-  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-react/-/components-react-3.24.0.tgz#6bdec2b083365006cd70fe87cda9280d21f2fc7b"
-  integrity sha512-NSFZh2gephYlu6uS+Vo5kvSqIj3upU19jQ/sdZTmmJ8QjY1sEcDFvj/iCH4i4tA52eiZDeg9Ew+/3XRWPYtyIw==
+"@porsche-design-system/components-react@3.25.0-rc.1":
+  version "3.25.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-react/-/components-react-3.25.0-rc.1.tgz#7d32dafbbdb2370c56824d390d8d728539627708"
+  integrity sha512-ZgWRXtIo9VYyaepKBnGQ0lzceSavwOMuM8xhcQkNqhOxDBUwhe3c6TwqLgA+q0mCcg8k5yQOYJ/ISySBMsd9Vw==
   dependencies:
-    "@porsche-design-system/components-js" "3.24.0"
+    "@porsche-design-system/components-js" "3.25.0-rc.1"
 
 "@porsche-design-system/prettier-config@^1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@porsche-design-system/prettier-config/-/prettier-config-1.0.1.tgz#6b0fc60d3d42c7b4d9c998bf7b685513a5488400"
   integrity sha512-IhoHGmsPoO4VBoCebNGejBNHJFdAldV3m8kAoO458MJeaQJODM2b1UFzvGeTXGOMIFH4pkshcjZcF36vQvsn9w==
-
-"@porsche-design-system/utilities@5.4.1":
-  version "5.4.1"
-  resolved "https://registry.yarnpkg.com/@porsche-design-system/utilities/-/utilities-5.4.1.tgz#6961b0310b2808828578374dcd95f34ff1f7a253"
-  integrity sha512-/geTdkCKyYzM28/v8SZGyoAi57sKJQWJEz4u7LEri068E+3iSr4BVmwBYaKFbJ7RHk9eoiycQput756aJlND+Q==
-  dependencies:
-    csstype "^3.1.1"
 
 "@rollup/rollup-android-arm-eabi@4.30.1":
   version "4.30.1"
@@ -1900,7 +1893,7 @@ cssstyle@^2.3.0:
   dependencies:
     cssom "~0.3.6"
 
-csstype@^3.0.2, csstype@^3.0.7, csstype@^3.1.1:
+csstype@^3.0.2, csstype@^3.0.7:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.3.tgz#d80ff294d114fb0e6ac500fbf85b60137d7eff81"
   integrity sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==
