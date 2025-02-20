@@ -14,10 +14,12 @@
     "clean:build": "rm -rf ./out && rm -rf ./.next"
   },
   "dependencies": {
-    "@porsche-design-system/components-react": "3.26.0-rc.0",
+    "@porsche-design-system/components-react": "3.27.0-rc.5",
     "next": "15.1.4",
     "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react-dom": "19.0.0",
+    "ag-grid-community": "^33.1.0",
+    "ag-grid-react": "^33.1.0"
   },
   "devDependencies": {
     "@porsche-design-system/prettier-config": "^1.0.0",
