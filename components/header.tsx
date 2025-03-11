@@ -15,6 +15,7 @@ export const Header = () => (
     <PrefixedLink href="/phn-header">Phn Header</PrefixedLink>
     <PrefixedLink href="/layout-shift">Layout Shift</PrefixedLink>
     <PrefixedLink href="/styles">Styles</PrefixedLink>
+    <PrefixedLink href="/ag-grid">AG Grid</PrefixedLink>
 
     <PDivider className="divider" />
   </>
