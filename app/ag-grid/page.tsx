@@ -21,7 +21,7 @@ export type DataAdvanced = {
 
 const dataAdvanced: DataAdvanced[] = [
     {
-        imageUrl: 'http://localhost:3002/718.png',
+        imageUrl: '/718.png',
         model: '718',
         date: '23.06.2021',
         interest: 'New Car',
@@ -32,7 +32,7 @@ const dataAdvanced: DataAdvanced[] = [
         leadId: '0000824402',
     },
     {
-        imageUrl: 'http://localhost:3002/panamera.png',
+        imageUrl: '/panamera.png',
         model: 'Panamera',
         date: '19.06.2021',
         interest: 'New Car',
@@ -43,7 +43,7 @@ const dataAdvanced: DataAdvanced[] = [
         leadId: '0000824409',
     },
     {
-        imageUrl: 'http://localhost:3002/911.png',
+        imageUrl: '/911.png',
         model: '911',
         date: '19.05.2021',
         interest: 'Used Car',
@@ -54,7 +54,7 @@ const dataAdvanced: DataAdvanced[] = [
         leadId: '0000824408',
     },
     {
-        imageUrl: 'http://localhost:3002/macan.png',
+        imageUrl: '/macan.png',
         model: 'Macan',
         date: '10.05.2021',
         interest: 'Used Car',
@@ -65,7 +65,7 @@ const dataAdvanced: DataAdvanced[] = [
         leadId: '0000824407',
     },
     {
-        imageUrl: 'http://localhost:3002/taycan.png',
+        imageUrl: '/taycan.png',
         model: 'Taycan',
         date: '03.05.2021',
         interest: 'New Car',
