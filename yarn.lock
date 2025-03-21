@@ -1070,17 +1070,17 @@
     "@parcel/watcher-win32-ia32" "2.5.0"
     "@parcel/watcher-win32-x64" "2.5.0"
 
-"@porsche-design-system/components-js@3.27.1":
-  version "3.27.1"
-  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-3.27.1.tgz#60d416f7d7a908efc9019e8eb9e22925e845d5d0"
-  integrity sha512-97cdeOw9D2phhK2VWRmkVQr0fMn1/KIQCbreJYYafxaF0uzvnv0W8VO+ewHjYWal16raEEbb2IFNO88OxKNjRg==
+"@porsche-design-system/components-js@3.27.3":
+  version "3.27.3"
+  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-js/-/components-js-3.27.3.tgz#4efb205408113ef53468069f911626d260091f34"
+  integrity sha512-nvdKnU+Ddsbni88kI0vRVPAxLE/SDnQ08BxQvx+vTmvNCsp4N1maQW9mQnPSXKbZLm47nBZBWMblLwPd02Qb7w==
 
-"@porsche-design-system/components-react@3.27.1":
-  version "3.27.1"
-  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-react/-/components-react-3.27.1.tgz#5307b1dad2c5b000587fc14a11ca8bda8f44edd2"
-  integrity sha512-lt/sJetdDhoCBvDCTMpjqYCXmeJr+EZReQ5IiNd/EfM2l5BWfp1Ae17YGW1LTJLBE+vszPDHIA3WtpvpdmTbDA==
+"@porsche-design-system/components-react@3.27.3":
+  version "3.27.3"
+  resolved "https://registry.yarnpkg.com/@porsche-design-system/components-react/-/components-react-3.27.3.tgz#5f5f58438f2347ce0b7d8a28e4e1c756dad0f0c9"
+  integrity sha512-bleWdXvmIG1LUOgiCrvPCMGR9PE5oS9PdkJD7wiOrekZRigOIrSmJ9+FvXQG0gqd1W8aXenGahTtt37FC4KeFg==
   dependencies:
-    "@porsche-design-system/components-js" "3.27.1"
+    "@porsche-design-system/components-js" "3.27.3"
 
 "@porsche-design-system/prettier-config@^1.0.0":
   version "1.0.1"
