@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@porsche-design-system/components-react": "3.27.3",
-    "next": "15.1.4",
+    "next": "15.2.3",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "ag-grid-community": "^33.1.0",
